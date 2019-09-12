@@ -67,3 +67,24 @@ input {
 button {
     font-family: 'Merriweather', serif;
 }
+
+h1 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.6em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    line-height: 1.8;
+    font-weight: 400;
+}
