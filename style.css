@@ -51,3 +51,19 @@ form {
     float: left;
     background: #fff;
 }
+
+label, input {
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-right: .5em;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    font-family: 'Merriweather', serif;
+}
