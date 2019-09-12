@@ -1,4 +1,4 @@
-# Image Gallery
+# Map Coordinates
 
 Interface where users can convert longitude and latitude coordinates between the Degrees, Minutes, Seconds (DMS) and Digital Degrees (DD) formats.
 
