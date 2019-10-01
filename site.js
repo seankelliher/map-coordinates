@@ -5,23 +5,30 @@ let convert;
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    sample.functionOne();
-    sample.functionTwo();
+    convert.fromDegrees();
+    convert.fromDecimalDegrees();
 });
 
 //The convert variable (let)
 convert = {
 
-    functionOne: function () {
+    fromDegrees: function () {
         "use strict";
 
-        //add function content
+        document.getElementById("from-dms").addEventListener("click", function () {
+
+            //add function content
+        });
     },
 
-    functionTwo: function () {
+    fromDecimalDegrees: function () {
         "use strict";
 
-        //add function content
+        document.getElementById("from-dd").addEventListener("click", function () {
+
+            //add function content
+        });
+
     },
 
     functionThree: function () {
@@ -35,5 +42,5 @@ convert = {
 
         //add function content
     }
-    
+
 }; //close convert
