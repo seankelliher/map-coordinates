@@ -29,7 +29,7 @@ convert = {
 
         document.getElementById("from-dd").addEventListener("click", function () {
 
-            const decimal = document.getElementById("decimal").value;
+            const decimal = Number(document.getElementById("decimal").value);
         });
 
     },
