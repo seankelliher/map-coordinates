@@ -28,7 +28,7 @@ convert = {
 
         document.getElementById("from-dd").addEventListener("click", function () {
 
-            //add function content
+            const decimal = document.getElementById("decimal").value;
         });
 
     },
