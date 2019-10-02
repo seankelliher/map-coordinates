@@ -17,7 +17,9 @@ convert = {
 
         document.getElementById("from-dms").addEventListener("click", function () {
 
-            //add function content
+            const degrees = document.getElementById("degrees").value;
+            const minutes = document.getElementById("minutes").value;
+            const seconds = document.getElementById("seconds").value;
         });
     },
 
