@@ -25,6 +25,19 @@ convert = {
         });
     },
 
+    //Convert DMS to DD - Longitude
+    convertDmsLong: function () {
+        "use strict";
+
+        document.getElementById("convert-dms-long").addEventListener("click", function () {
+
+            const degreesLong = Number(document.getElementById("degrees-long").value);
+            const minutesLong = Number(document.getElementById("minutes-long").value);
+            const secondsLong = Number(document.getElementById("seconds-long").value);
+
+        });
+    },
+
     fromDecimalDegrees: function () {
         "use strict";
 
