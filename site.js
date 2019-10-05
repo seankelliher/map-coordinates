@@ -5,8 +5,10 @@ let convert;
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    convert.fromDegrees();
-    convert.fromDecimalDegrees();
+    convert.convertDmsLat();
+    convert.convertDmsLong();
+    convert.convertDecimalLat();
+    convert.convertDecimalLong();
 });
 
 //The convert variable (let)
