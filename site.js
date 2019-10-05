@@ -12,14 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //The convert variable (let)
 convert = {
 
-    fromDegrees: function () {
+    //Convert DMS to DD - Latitude
+    convertDmsLat: function () {
         "use strict";
 
-        document.getElementById("from-dms").addEventListener("click", function () {
+        document.getElementById("convert-dms-lat").addEventListener("click", function () {
 
-            const degrees = Number(document.getElementById("degrees").value);
-            const minutes = Number(document.getElementById("minutes").value);
-            const seconds = Number(document.getElementById("seconds").value);
+            const degreesLat = Number(document.getElementById("degrees-lat").value);
+            const minutesLat = Number(document.getElementById("minutes-lat").value);
+            const secondsLat = Number(document.getElementById("seconds-lat").value);
 
         });
     },
