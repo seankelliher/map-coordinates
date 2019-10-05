@@ -49,6 +49,17 @@ convert = {
 
     },
 
+    //Convert DD to DMS - Longitude
+    convertDecimalLong: function () {
+        "use strict";
+
+        document.getElementById("convert-decimal-long").addEventListener("click", function () {
+
+            const decimalLong = Number(document.getElementById("decimal-long").value);
+        });
+
+    },
+
     functionThree: function () {
         "use strict";
 
