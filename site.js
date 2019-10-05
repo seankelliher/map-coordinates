@@ -38,12 +38,13 @@ convert = {
         });
     },
 
-    fromDecimalDegrees: function () {
+    //Convert DD to DMS - Latitude
+    convertDecimalLat: function () {
         "use strict";
 
-        document.getElementById("from-dd").addEventListener("click", function () {
+        document.getElementById("convert-decimal-lat").addEventListener("click", function () {
 
-            const decimal = Number(document.getElementById("decimal").value);
+            const decimalLat = Number(document.getElementById("decimal-lat").value);
         });
 
     },
