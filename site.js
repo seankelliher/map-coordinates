@@ -22,17 +22,17 @@ convert = {
 
             const degLat = Number(document.getElementById("deg-lat").value);
             const minLat = Number(document.getElementById("min-lat").value);
-            const secondsLat = Number(document.getElementById("seconds-lat").value);
+            const secLat = Number(document.getElementById("sec-lat").value);
 
             const degCheck = /^\d{1,3}$/.test(degLat);
             const minCheck = /^\d{1,2}$/.test(minLat);
-            const secondsCheck = /^\d{1,2}$/.test(secondsLat);
+            const secCheck = /^\d{1,2}$/.test(secLat);
 
             if (degCheck === false && degLat >= 1 && degLat <= 90) {
                     //run function
                 } else if (minCheck === false && minLat >= 1 && minLat <= 59) {
                     //run function
-                } else if (secondsCheck === false && secondsLat >= 1 && secondsLat <= 59) {
+                } else if (secCheck === false && secLat >= 1 && secLat <= 59) {
                     //run function
                 } else {
                     //run function
@@ -49,7 +49,7 @@ convert = {
 
             const degLong = Number(document.getElementById("deg-long").value);
             const minLong = Number(document.getElementById("min-long").value);
-            const secondsLong = Number(document.getElementById("seconds-long").value);
+            const secLong = Number(document.getElementById("sec-long").value);
 
         });
     },
