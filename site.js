@@ -24,6 +24,10 @@ convert = {
             const minutesLat = Number(document.getElementById("minutes-lat").value);
             const secondsLat = Number(document.getElementById("seconds-lat").value);
 
+            const degreesCheck = /^\d{1,3}$/.test(degreesLat);
+            const minutesCheck = /^\d{1,2}$/.test(minutesLat);
+            const secondsCheck = /^\d{1,2}$/.test(secondsLat);
+
         });
     },
 
