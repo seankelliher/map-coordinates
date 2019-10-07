@@ -28,6 +28,16 @@ convert = {
             const minutesCheck = /^\d{1,2}$/.test(minutesLat);
             const secondsCheck = /^\d{1,2}$/.test(secondsLat);
 
+            if (degreesCheck === false && degreesLat >= 1 && degreesLat <= 90) {
+                    //run function
+                } else if (minutesCheck === false && minutesLat >= 1 && minutesLat <= 59) {
+                    //run function
+                } else if (secondsCheck === false && secondsLat >= 1 && secondsLat <= 59) {
+                    //run function
+                } else {
+                    //run function
+            }
+
         });
     },
 
