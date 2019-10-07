@@ -20,15 +20,15 @@ convert = {
 
         document.getElementById("convert-dms-lat").addEventListener("click", function () {
 
-            const degreesLat = Number(document.getElementById("degrees-lat").value);
+            const degLat = Number(document.getElementById("deg-lat").value);
             const minutesLat = Number(document.getElementById("minutes-lat").value);
             const secondsLat = Number(document.getElementById("seconds-lat").value);
 
-            const degreesCheck = /^\d{1,3}$/.test(degreesLat);
+            const degCheck = /^\d{1,3}$/.test(degLat);
             const minutesCheck = /^\d{1,2}$/.test(minutesLat);
             const secondsCheck = /^\d{1,2}$/.test(secondsLat);
 
-            if (degreesCheck === false && degreesLat >= 1 && degreesLat <= 90) {
+            if (degCheck === false && degLat >= 1 && degLat <= 90) {
                     //run function
                 } else if (minutesCheck === false && minutesLat >= 1 && minutesLat <= 59) {
                     //run function
@@ -47,7 +47,7 @@ convert = {
 
         document.getElementById("convert-dms-long").addEventListener("click", function () {
 
-            const degreesLong = Number(document.getElementById("degrees-long").value);
+            const degLong = Number(document.getElementById("deg-long").value);
             const minutesLong = Number(document.getElementById("minutes-long").value);
             const secondsLong = Number(document.getElementById("seconds-long").value);
 
