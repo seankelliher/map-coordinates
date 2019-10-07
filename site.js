@@ -20,9 +20,9 @@ convert = {
 
         document.getElementById("convert-dms-lat").addEventListener("click", function () {
 
-            const degLat = Number(document.getElementById("deg-lat").value);
-            const minLat = Number(document.getElementById("min-lat").value);
-            const secLat = Number(document.getElementById("sec-lat").value);
+            const degLat = document.getElementById("deg-lat").value;
+            const minLat = document.getElementById("min-lat").value;
+            const secLat = document.getElementById("sec-lat").value;
 
             const degCheck = /^\d{1,3}$/.test(degLat);
             const minCheck = /^\d{1,2}$/.test(minLat);
