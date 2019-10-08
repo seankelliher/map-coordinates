@@ -24,7 +24,7 @@ convert = {
             const minLat = document.getElementById("min-lat").value;
             const secLat = document.getElementById("sec-lat").value;
 
-            const degCheck = /^\d{1,3}$/.test(degLat);
+            const degCheck = /^\d{1,2}$/.test(degLat);
             const minCheck = /^\d{1,2}$/.test(minLat);
             const secCheck = /^\d{1,2}$/.test(secLat);
 
