@@ -28,19 +28,24 @@ convert = {
             const minCheck = /^\d{1,2}$/.test(minLat);
             const secCheck = /^\d{1,2}$/.test(secLat);
 
-
             if (degCheck === false) {
                     //run function, show error message
+                    alert("error - degrees check is false");
                 } else if (minCheck === false) {
                     //run function, show error message
+                    alert("error - minutes check is false");
                 } else if (secCheck === false) {
                     //run function, show error message
-                } else if (degLat !>= 1 && <= 90) {
+                    alert("error - seconds check is false");
+                } else if (degLat < 1 || degLat > 90) {
                     //run function, show error message
-                } else if (minLat !>= 1 && <= 59) {
+                    alert("error - degrees not between 1 and 90");
+                } else if (minLat < 1 || minLat > 59) {
                     //run function, show error message
-                } else if (secLat !>= 1 && <= 59) {
+                    alert("error - minutes not between 1 and 59");
+                } else if (secLat < 1 || secLat > 59) {
                     //run function, show error message
+                    alert("error - seconds not between 1 and 59");
                 } else {
                     //run function to convert
             }
