@@ -24,17 +24,17 @@ convert = {
             const minLat = document.getElementById("min-lat").value;
             const secLat = document.getElementById("sec-lat").value;
 
-            const degCheck = /^\d{1,2}$/.test(degLat);
-            const minCheck = /^\d{1,2}$/.test(minLat);
-            const secCheck = /^\d{1,2}$/.test(secLat);
+            const degLatCheck = /^\d{1,2}$/.test(degLat);
+            const minLatCheck = /^\d{1,2}$/.test(minLat);
+            const secLatCheck = /^\d{1,2}$/.test(secLat);
 
-            if (degCheck === false) {
+            if (degLatCheck === false) {
                     //run function, show error message
                     alert("error - degrees check is false");
-                } else if (minCheck === false) {
+                } else if (minLatCheck === false) {
                     //run function, show error message
                     alert("error - minutes check is false");
-                } else if (secCheck === false) {
+                } else if (secLatCheck === false) {
                     //run function, show error message
                     alert("error - seconds check is false");
                 } else if (degLat < 1 || degLat > 90) {
