@@ -18,7 +18,7 @@ convert = {
     convertDmsLat: function () {
         "use strict";
 
-        document.getElementById("convert-dms-lat").addEventListener("click", function () {
+        document.getElementById("convert-dms-lat").addEventListener("click", function (event) {
 
             const degLat = document.getElementById("deg-lat").value;
             const minLat = document.getElementById("min-lat").value;
@@ -49,6 +49,9 @@ convert = {
                 } else {
                     //run function to convert
             }
+
+            //prevents page from reloading and erasing entered numbers.
+            event.preventDefault();
 
         });
     },
