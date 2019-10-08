@@ -48,7 +48,12 @@ convert = {
                     alert("error - seconds not between 1 and 59");
                 } else {
                     //run function to convert
+                    const degLatNumber = Number(degLat);
+                    const minLatumber = Number(minLat);
+                    const secLatNumber = Number(secLat);
             }
+
+
 
             //prevents page from reloading and erasing entered numbers.
             event.preventDefault();
