@@ -61,6 +61,7 @@ label, input {
 }
 
 input {
+    margin: 1em .6em 1em .6em;
     text-align: center;
 }
 
