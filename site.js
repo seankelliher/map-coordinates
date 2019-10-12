@@ -28,6 +28,15 @@ convert = {
             const minLatCheck = /^\d{1,2}$/.test(minLat);
             const secLatCheck = /^\d{1,2}$/.test(secLat);
 
+            const dmsNorth = document.getElementById("dms-north").checked;
+            const dmsSouth = document.getElementById("dms-south").checked;
+
+            const dmsPole = (
+                dmsNorth === true
+                ? "North"
+                : "South"
+            );
+
             if (degLatCheck === false) {
                     //run function, show error message
                     alert("error - degrees check is false");
