@@ -92,5 +92,5 @@ p {
 
 .sum {
     color: red;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
