@@ -96,6 +96,34 @@ convert = {
                 : "West"
             );
 
+            if (degLongCheck === false) {
+                    //run function, show error message
+                    alert("error - degrees check is false");
+                } else if (minLongCheck === false) {
+                    //run function, show error message
+                    alert("error - minutes check is false");
+                } else if (secLongCheck === false) {
+                    //run function, show error message
+                    alert("error - seconds check is false");
+                } else if (degLong < 1 || degLong > 180) {
+                    //run function, show error message
+                    alert("error - degrees not between 1 and 90");
+                } else if (minLong < 1 || minLong > 59) {
+                    //run function, show error message
+                    alert("error - minutes not between 1 and 59");
+                } else if (secLong < 1 || secLong > 59) {
+                    //run function, show error message
+                    alert("error - seconds not between 1 and 59");
+                } else {
+                    //run function to convert
+                    const degLongNum = Number(degLong);
+                    const minLongNum = Number(minLong);
+                    const secLongNum = Number(secLong);
+
+                    const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
+                    alert(sum  + " degrees " + dmsPole);
+            }
+
         });
     },
 
