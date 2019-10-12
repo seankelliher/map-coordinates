@@ -65,8 +65,6 @@ convert = {
                     alert(sum  + " degrees " + dmsPole);
             }
 
-
-
             //prevents page from reloading and erasing entered numbers.
             event.preventDefault();
 
@@ -77,7 +75,7 @@ convert = {
     convertDmsLong: function () {
         "use strict";
 
-        document.getElementById("convert-dms-long").addEventListener("click", function () {
+        document.getElementById("convert-dms-long").addEventListener("click", function (event) {
 
             const degLong = document.getElementById("deg-long").value;
             const minLong = document.getElementById("min-long").value;
@@ -123,6 +121,9 @@ convert = {
                     const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
                     alert(sum  + " degrees " + dmsPole);
             }
+
+            //prevents page from reloading and erasing entered numbers.
+            event.preventDefault();
 
         });
     },
