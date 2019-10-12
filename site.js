@@ -60,7 +60,7 @@ convert = {
                     const degLatNum = Number(degLat);
                     const minLatNum = Number(minLat);
                     const secLatNum = Number(secLat);
-                    
+
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
                     alert(sum  + " degrees " + dmsPole);
             }
@@ -79,9 +79,22 @@ convert = {
 
         document.getElementById("convert-dms-long").addEventListener("click", function () {
 
-            const degLong = Number(document.getElementById("deg-long").value);
-            const minLong = Number(document.getElementById("min-long").value);
-            const secLong = Number(document.getElementById("sec-long").value);
+            const degLong = document.getElementById("deg-long").value;
+            const minLong = document.getElementById("min-long").value;
+            const secLong = document.getElementById("sec-long").value;
+
+            const degLongCheck = /^\d{1,3}$/.test(degLong);
+            const minLongCheck = /^\d{1,2}$/.test(minLong);
+            const secLongCheck = /^\d{1,2}$/.test(secLong);
+
+            const dmsEast = document.getElementById("dms-east").checked;
+            const dmsWest = document.getElementById("dms-west").checked;
+
+            const dmsPole = (
+                dmsEast === true
+                ? "East"
+                : "West"
+            );
 
         });
     },
