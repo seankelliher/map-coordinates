@@ -96,6 +96,8 @@ convert = {
                 : "West"
             );
 
+            const degLongSum = document.getElementById("deg-long-sum");
+
             if (degLongCheck === false) {
                     //run function, show error message
                     alert("error - degrees check is false");
