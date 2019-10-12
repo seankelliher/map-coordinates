@@ -41,22 +41,22 @@ convert = {
 
             if (degLatCheck === false) {
                     //run function, show error message
-                    alert("error - degrees check is false");
+                    degLatSum.textContent = "Degrees must be numbers only";
                 } else if (minLatCheck === false) {
                     //run function, show error message
-                    alert("error - minutes check is false");
+                    degLatSum.textContent  = "minutes must be numbers only";
                 } else if (secLatCheck === false) {
                     //run function, show error message
-                    alert("error - seconds check is false");
+                    degLatSum.textContent  = "Seconds must be numbers only";
                 } else if (degLat < 1 || degLat > 90) {
                     //run function, show error message
-                    alert("error - degrees not between 1 and 90");
+                    degLatSum.textContent  = "Degrees must be between 1 and 90";
                 } else if (minLat < 1 || minLat > 59) {
                     //run function, show error message
-                    alert("error - minutes not between 1 and 59");
+                    degLatSum.textContent  = "Minutes must be between 1 and 59";
                 } else if (secLat < 1 || secLat > 59) {
                     //run function, show error message
-                    alert("error - seconds not between 1 and 59");
+                    degLatSum.textContent  = "Seconds must be between 1 and 59";
                 } else {
                     //run function to convert
                     const degLatNum = Number(degLat);
@@ -64,7 +64,11 @@ convert = {
                     const secLatNum = Number(secLat);
 
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
-                    alert(sum  + " degrees " + dmsPole);
+
+                    //Degree symbol, space, dash, space.
+                    const degSymbol = String.fromCharCode(176, 32, 45, 32);
+                    
+                    degLatSum.textContent  = sum + degSymbol + dmsPole;
             }
 
             //prevents page from reloading and erasing entered numbers.
