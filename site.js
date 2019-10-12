@@ -60,9 +60,9 @@ convert = {
                     const degLatNum = Number(degLat);
                     const minLatNum = Number(minLat);
                     const secLatNum = Number(secLat);
-
+                    
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
-                    alert(summary);
+                    alert(sum  + " degrees " + dmsPole);
             }
 
 
