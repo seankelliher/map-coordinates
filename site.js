@@ -37,6 +37,8 @@ convert = {
                 : "South"
             );
 
+            const degLatSum = document.getElementById("deg-lat-sum");
+
             if (degLatCheck === false) {
                     //run function, show error message
                     alert("error - degrees check is false");
