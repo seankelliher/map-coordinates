@@ -89,3 +89,8 @@ p {
     line-height: 1.8;
     font-weight: 400;
 }
+
+.sum {
+    color: red;
+    visibility: hidden;
+}
