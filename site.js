@@ -152,8 +152,8 @@ convert = {
 
             const decimalLatNum = Number(decimalLat);
 
-            const decimalNorth = document.getElementById("decimal-north").checked;
-            const decimalSouth = document.getElementById("decimal-south").checked;
+            const decimalNorth = document.getElementById("dd-north").checked;
+            const decimalSouth = document.getElementById("dd-south").checked;
 
             const dmsPole = (
                 decimalNorth === true
