@@ -41,26 +41,26 @@ convert = {
                 : "South"
             );
 
-            const ddLatSum = document.getElementById("dd-lat-sum");
+            const dmsLatSum = document.getElementById("dms-lat-sum");
 
             if (degLatCheck === false) {
                     //run function, show error message
-                    ddLatSum.textContent = "Degrees must be numbers only";
+                    dmsLatSum.textContent = "Degrees must be numbers only";
                 } else if (minLatCheck === false) {
                     //run function, show error message
-                    ddLatSum.textContent  = "Minutes must be numbers only";
+                    dmsLatSum.textContent  = "Minutes must be numbers only";
                 } else if (secLatCheck === false) {
                     //run function, show error message
-                    ddLatSum.textContent  = "Seconds must be numbers only";
+                    dmsLatSum.textContent  = "Seconds must be numbers only";
                 } else if (degLatNum < 1 || degLat > 90) {
                     //run function, show error message
-                    ddLatSum.textContent  = "Degrees must be between 1 + 90";
+                    dmsLatSum.textContent  = "Degrees must be between 1 + 90";
                 } else if (minLatNum < 1 || minLat > 59) {
                     //run function, show error message
-                    ddLatSum.textContent  = "Minutes must be between 1 + 59";
+                    dmsLatSum.textContent  = "Minutes must be between 1 + 59";
                 } else if (secLatNum < 1 || secLat > 59) {
                     //run function, show error message
-                    ddLatSum.textContent  = "Seconds must be between 1 + 59";
+                    dmsLatSum.textContent = "Seconds must be between 1 + 59";
                 } else {
                     //run function to convert
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
@@ -68,7 +68,7 @@ convert = {
                     //Degree symbol, space, dash, space.
                     const degSymbol = String.fromCharCode(176, 32, 45, 32);
                     
-                    ddLatSum.textContent  = sum + degSymbol + dmsPole;
+                    dmsLatSum.textContent  = sum + degSymbol + dmsPole;
             }
 
             //prevents page from reloading and erasing entered numbers.
