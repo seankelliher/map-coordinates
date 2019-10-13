@@ -104,7 +104,7 @@ convert = {
                 : "West"
             );
 
-            const dmsLongSum = document.getElementById("deg-long-sum");
+            const dmsLongSum = document.getElementById("dms-long-sum");
 
             if (degLongCheck === false) {
                     //run function, show error message
