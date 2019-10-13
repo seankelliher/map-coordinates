@@ -146,7 +146,16 @@ convert = {
 
         document.getElementById("convert-decimal-lat").addEventListener("click", function () {
 
-            const decimalLat = Number(document.getElementById("decimal-lat").value);
+            const decimalLat = document.getElementById("decimal-lat").value;
+            const decimalLatNum = Number(decimalLat);
+
+            const decimalDeg = Math.floor(decimalLatNum);
+            const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
+            const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
+            const decimalSec2 = Math.floor(decimalSec1 * 3600);
+
+            alert(decimalDeg + " deg " + decimalMin + " min " + decimalSec2 + " sec ");
+
         });
 
     },
