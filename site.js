@@ -41,7 +41,7 @@ convert = {
                 : "South"
             );
 
-            const ddLatSum = document.getElementById("deg-lat-sum");
+            const ddLatSum = document.getElementById("dd-lat-sum");
 
             if (degLatCheck === false) {
                     //run function, show error message
