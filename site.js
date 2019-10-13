@@ -155,7 +155,7 @@ convert = {
             const ddNorth = document.getElementById("dd-north").checked;
             const ddSouth = document.getElementById("dd-south").checked;
 
-            const dmsPole = (
+            const ddPole = (
                 ddNorth === true
                 ? "North"
                 : "South"
