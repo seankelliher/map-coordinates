@@ -163,13 +163,22 @@ convert = {
 
             const ddLatSum = document.getElementById("dd-lat-sum");
 
-            const decimalDeg = Math.floor(decimalLatNum);
-            const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
-            const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
-            const decimalSec2 = Math.floor(decimalSec1 * 3600);
 
-            alert(decimalDeg + " deg " + decimalMin + " min " + decimalSec2 + " sec ");
+            if (decimalLatCheck === false) {
+                    //run function, show error message
+                    ddLatSum.textContent = "Degrees must be numbers only";
+                } else if (decimalLatNum < 1 || decimalLatNum > 90) {
+                    //run function, show error message
+                    ddLatSum.textContent  = "Degrees must be between 1 + 90";
+                } else {
+                    //Run function to convert
+                    const decimalDeg = Math.floor(decimalLatNum);
+                    const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
+                    const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
+                    const decimalSec2 = Math.floor(decimalSec1 * 3600);
 
+                    alert(decimalDeg + " deg " + decimalMin + " min " + decimalSec2 + " sec ");
+                }
         });
 
     },
