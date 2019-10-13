@@ -201,7 +201,47 @@ convert = {
 
         document.getElementById("convert-decimal-long").addEventListener("click", function () {
 
-            const decimalLong = Number(document.getElementById("decimal-long").value);
+            const decimalLong = document.getElementById("decimal-long").value;
+
+            const decimalLongCheck = /^\d{1,3}.?\d{1,17}$/.test(decimalLong);
+
+            const decimalLongNum = Number(decimalLong);
+
+            const ddEast = document.getElementById("dd-east").checked;
+            const ddWest = document.getElementById("dd-west").checked;
+
+            const ddMeridian = (
+                ddEast === true
+                ? "East"
+                : "West"
+            );
+
+            const ddLongSum = document.getElementById("dd-long-sum");
+
+            if (decimalLongCheck === false) {
+                    //run function, show error message
+                    ddLongSum.textContent = "Degrees must be numbers only";
+                } else if (decimalLongNum < 1 || decimalLongNum > 180) {
+                    //run function, show error message
+                    ddLongSum.textContent  = "Degrees must be between 1 + 90";
+                } else {
+                    //Run function to convert
+                    const decimalDeg = Math.floor(decimalLongNum);
+                    const decimalMin = Math.floor((decimalLongNum - decimalDeg) * 60);
+                    const decimalSec1 = (decimalLongNum - decimalDeg) - (decimalMin/60);
+                    const decimalSec2 = Math.floor(decimalSec1 * 3600);
+
+                    //Symbols and space.
+                    const degSymbol = String.fromCharCode(176, 32);
+                    const minSymbol = String.fromCharCode(39, 32);
+                    const secSymbol = String.fromCharCode(34, 32);
+
+                    ddLongSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
+                }
+
+            //prevents page from reloading and erasing entered numbers.
+            event.preventDefault();
+
         });
 
     },
