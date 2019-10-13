@@ -144,102 +144,114 @@ convert = {
         });
     },
 
-    //Convert DD to DMS - Latitude
+    //Convert DD to DMS - Latitude.
     convertDecimalLat: function () {
         "use strict";
 
         document.getElementById("convert-decimal-lat").addEventListener("click", function (event) {
 
+            //Retrieve the entered decimal degree.
             const decimalLat = document.getElementById("decimal-lat").value;
 
+            //Verify that the number is up to 2 digits, dot, up to 17 digits.
             const decimalLatCheck = /^\d{1,2}.?\d{1,17}$/.test(decimalLat);
 
+            //Convert from string to number.
             const decimalLatNum = Number(decimalLat);
 
+            //Retrieve the "pole" radio buttons.
             const ddNorth = document.getElementById("dd-north").checked;
             const ddSouth = document.getElementById("dd-south").checked;
 
+            //Discover which one is checked.
             const ddPole = (
                 ddNorth === true
                 ? "North"
                 : "South"
             );
 
+            //Retrieve element where result will be placed.
             const ddLatSum = document.getElementById("dd-lat-sum");
 
+            //Check is entries are all numbers and between certain points.
             if (decimalLatCheck === false) {
-                    //run function, show error message
                     ddLatSum.textContent = "Degrees must be numbers only";
                 } else if (decimalLatNum < 1 || decimalLatNum > 90) {
-                    //run function, show error message
                     ddLatSum.textContent  = "Degrees must be between 1 + 90";
                 } else {
-                    //Run function to convert
+                    //Do the conversion.
                     const decimalDeg = Math.floor(decimalLatNum);
                     const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
                     const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
                     const decimalSec2 = Math.floor(decimalSec1 * 3600);
 
-                    //Symbols and space.
+                    //Degree symbol, space.
                     const degSymbol = String.fromCharCode(176, 32);
                     const minSymbol = String.fromCharCode(39, 32);
                     const secSymbol = String.fromCharCode(34, 32);
 
+                    //Place the result.
                     ddLatSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
                 }
 
-            //prevents page from reloading and erasing entered numbers.
+            //Prevents page from reloading and erasing entered numbers.
             event.preventDefault();
 
         });
 
     },
 
-    //Convert DD to DMS - Longitude
+    //Convert DD to DMS - Longitude.
     convertDecimalLong: function () {
         "use strict";
 
-        document.getElementById("convert-decimal-long").addEventListener("click", function () {
+        document.getElementById("convert-decimal-long").addEventListener("click", function (event) {
 
+            //Retrieve the entered decimal degree.
             const decimalLong = document.getElementById("decimal-long").value;
 
+            //Verify that the number is up to 3 digits, dot, up to 17 digits.
             const decimalLongCheck = /^\d{1,3}.?\d{1,17}$/.test(decimalLong);
 
+            //Convert from string to number.
             const decimalLongNum = Number(decimalLong);
 
+            //Retrieve the "meridian" radio buttons.
             const ddEast = document.getElementById("dd-east").checked;
             const ddWest = document.getElementById("dd-west").checked;
 
+            //Discover which one is checked.
             const ddMeridian = (
                 ddEast === true
                 ? "East"
                 : "West"
             );
 
+            //Retrieve element where result will be placed.
             const ddLongSum = document.getElementById("dd-long-sum");
 
+            //Check is entries are all numbers and between certain points.
             if (decimalLongCheck === false) {
-                    //run function, show error message
                     ddLongSum.textContent = "Degrees must be numbers only";
                 } else if (decimalLongNum < 1 || decimalLongNum > 180) {
-                    //run function, show error message
-                    ddLongSum.textContent  = "Degrees must be between 1 + 90";
+                    ddLongSum.textContent  = "Degrees must be between 1 + 180";
                 } else {
-                    //Run function to convert
+                    //Do the conversion.
                     const decimalDeg = Math.floor(decimalLongNum);
                     const decimalMin = Math.floor((decimalLongNum - decimalDeg) * 60);
                     const decimalSec1 = (decimalLongNum - decimalDeg) - (decimalMin/60);
                     const decimalSec2 = Math.floor(decimalSec1 * 3600);
 
-                    //Symbols and space.
+                    //Degree symbol, space.
                     const degSymbol = String.fromCharCode(176, 32);
                     const minSymbol = String.fromCharCode(39, 32);
                     const secSymbol = String.fromCharCode(34, 32);
 
+                    //Place the result.
                     ddLongSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
                 }
 
-            //prevents page from reloading and erasing entered numbers.
+            //Prevents page from reloading and erasing entered numbers.
             event.preventDefault();
 
         });
