@@ -54,13 +54,13 @@ convert = {
                     degLatSum.textContent  = "Seconds must be numbers only";
                 } else if (degLatNum < 1 || degLat > 90) {
                     //run function, show error message
-                    degLatSum.textContent  = "Degrees must be between 1 and 90";
+                    degLatSum.textContent  = "Degrees must be between 1 + 90";
                 } else if (minLatNum < 1 || minLat > 59) {
                     //run function, show error message
-                    degLatSum.textContent  = "Minutes must be between 1 and 59";
+                    degLatSum.textContent  = "Minutes must be between 1 + 59";
                 } else if (secLatNum < 1 || secLat > 59) {
                     //run function, show error message
-                    degLatSum.textContent  = "Seconds must be between 1 and 59";
+                    degLatSum.textContent  = "Seconds must be between 1 + 59";
                 } else {
                     //run function to convert
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
@@ -117,13 +117,13 @@ convert = {
                     degLongSum.textContent  = "Seconds must be numbers only";
                 } else if (degLongNum < 1 || degLong > 180) {
                     //run function, show error message
-                    degLongSum.textContent  = "Degrees must be between 1 and 180";
+                    degLongSum.textContent  = "Degrees must be between 1 + 180";
                 } else if (minLongNum < 1 || minLong > 59) {
                     //run function, show error message
-                    degLongSum.textContent  = "Minutes must be between 1 and 59";
+                    degLongSum.textContent  = "Minutes must be between 1 + 59";
                 } else if (secLongNum < 1 || secLong > 59) {
                     //run function, show error message
-                    degLongSum.textContent  = "Seconds must be between 1 and 59";
+                    degLongSum.textContent  = "Seconds must be between 1 + 59";
                 } else {
                     //run function to convert
                     const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
