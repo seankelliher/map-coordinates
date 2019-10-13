@@ -161,6 +161,8 @@ convert = {
                 : "South"
             );
 
+            const decimalLatSum = document.getElementById("decimal-lat-sum");
+
             const decimalDeg = Math.floor(decimalLatNum);
             const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
             const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
