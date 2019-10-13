@@ -28,6 +28,10 @@ convert = {
             const minLatCheck = /^\d{1,2}$/.test(minLat);
             const secLatCheck = /^\d{1,2}$/.test(secLat);
 
+            const degLatNum = Number(degLat);
+            const minLatNum = Number(minLat);
+            const secLatNum = Number(secLat);
+
             const dmsNorth = document.getElementById("dms-north").checked;
             const dmsSouth = document.getElementById("dms-south").checked;
 
@@ -44,25 +48,21 @@ convert = {
                     degLatSum.textContent = "Degrees must be numbers only";
                 } else if (minLatCheck === false) {
                     //run function, show error message
-                    degLatSum.textContent  = "minutes must be numbers only";
+                    degLatSum.textContent  = "Minutes must be numbers only";
                 } else if (secLatCheck === false) {
                     //run function, show error message
                     degLatSum.textContent  = "Seconds must be numbers only";
-                } else if (degLat < 1 || degLat > 90) {
+                } else if (degLatNum < 1 || degLat > 90) {
                     //run function, show error message
                     degLatSum.textContent  = "Degrees must be between 1 and 90";
-                } else if (minLat < 1 || minLat > 59) {
+                } else if (minLatNum < 1 || minLat > 59) {
                     //run function, show error message
                     degLatSum.textContent  = "Minutes must be between 1 and 59";
-                } else if (secLat < 1 || secLat > 59) {
+                } else if (secLatNum < 1 || secLat > 59) {
                     //run function, show error message
                     degLatSum.textContent  = "Seconds must be between 1 and 59";
                 } else {
                     //run function to convert
-                    const degLatNum = Number(degLat);
-                    const minLatNum = Number(minLat);
-                    const secLatNum = Number(secLat);
-
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
 
                     //Degree symbol, space, dash, space.
@@ -91,6 +91,10 @@ convert = {
             const minLongCheck = /^\d{1,2}$/.test(minLong);
             const secLongCheck = /^\d{1,2}$/.test(secLong);
 
+            const degLongNum = Number(degLong);
+            const minLongNum = Number(minLong);
+            const secLongNum = Number(secLong);
+
             const dmsEast = document.getElementById("dms-east").checked;
             const dmsWest = document.getElementById("dms-west").checked;
 
@@ -111,21 +115,17 @@ convert = {
                 } else if (secLongCheck === false) {
                     //run function, show error message
                     alert("error - seconds check is false");
-                } else if (degLong < 1 || degLong > 180) {
+                } else if (degLongNum < 1 || degLong > 180) {
                     //run function, show error message
                     alert("error - degrees not between 1 and 90");
-                } else if (minLong < 1 || minLong > 59) {
+                } else if (minLongNum < 1 || minLong > 59) {
                     //run function, show error message
                     alert("error - minutes not between 1 and 59");
-                } else if (secLong < 1 || secLong > 59) {
+                } else if (secLongNum < 1 || secLong > 59) {
                     //run function, show error message
                     alert("error - seconds not between 1 and 59");
                 } else {
                     //run function to convert
-                    const degLongNum = Number(degLong);
-                    const minLongNum = Number(minLong);
-                    const secLongNum = Number(secLong);
-
                     const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
                     alert(sum  + " degrees " + dmsPole);
             }
