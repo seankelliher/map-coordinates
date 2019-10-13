@@ -65,8 +65,8 @@ convert = {
                     //run function to convert
                     const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
 
-                    //Degree symbol, space, dash, space.
-                    const degSymbol = String.fromCharCode(176, 32, 45, 32);
+                    //Degree symbol, space.
+                    const degSymbol = String.fromCharCode(176, 32);
                     
                     dmsLatSum.textContent  = sum + degSymbol + dmsPole;
             }
