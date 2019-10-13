@@ -132,7 +132,7 @@ convert = {
                     const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
 
                     //Degree symbol, space.
-                    const degSymbol = String.fromCharCode(176, 32, 45, 32);
+                    const degSymbol = String.fromCharCode(176, 32);
 
                     //Place the result.
                     dmsLongSum.textContent  = sum + degSymbol + dmsMeridian;
