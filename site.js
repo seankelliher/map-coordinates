@@ -105,7 +105,7 @@ convert = {
             const dmsWest = document.getElementById("dms-west").checked;
 
             //Discover which one is checked.
-            const dmsPole = (
+            const dmsMeridian = (
                 dmsEast === true
                 ? "East"
                 : "West"
@@ -135,7 +135,7 @@ convert = {
                     const degSymbol = String.fromCharCode(176, 32, 45, 32);
 
                     //Place the result.
-                    dmsLongSum.textContent  = sum + degSymbol + dmsPole;
+                    dmsLongSum.textContent  = sum + degSymbol + dmsMeridian;
             }
 
             //Prevents page from reloading and erasing entered numbers.
