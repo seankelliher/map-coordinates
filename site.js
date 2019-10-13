@@ -152,11 +152,11 @@ convert = {
 
             const decimalLatNum = Number(decimalLat);
 
-            const decimalNorth = document.getElementById("dd-north").checked;
-            const decimalSouth = document.getElementById("dd-south").checked;
+            const ddNorth = document.getElementById("dd-north").checked;
+            const ddSouth = document.getElementById("dd-south").checked;
 
             const dmsPole = (
-                decimalNorth === true
+                ddNorth === true
                 ? "North"
                 : "South"
             );
