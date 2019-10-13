@@ -248,7 +248,7 @@ convert = {
                     const secSymbol = String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLongSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
+                    ddLongSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddMeridian;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
