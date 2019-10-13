@@ -144,11 +144,11 @@ convert = {
     convertDecimalLat: function () {
         "use strict";
 
-        document.getElementById("convert-decimal-lat").addEventListener("click", function () {
+        document.getElementById("convert-decimal-lat").addEventListener("click", function (event) {
 
             const decimalLat = document.getElementById("decimal-lat").value;
 
-            const decimalLatCheck = /^\d{1,2}.\d{1,17}$/.test(decimalLat);
+            const decimalLatCheck = /^\d{1,2}.?\d{1,17}$/.test(decimalLat);
 
             const decimalLatNum = Number(decimalLat);
 
@@ -163,7 +163,6 @@ convert = {
 
             const ddLatSum = document.getElementById("dd-lat-sum");
 
-
             if (decimalLatCheck === false) {
                     //run function, show error message
                     ddLatSum.textContent = "Degrees must be numbers only";
@@ -177,8 +176,17 @@ convert = {
                     const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
                     const decimalSec2 = Math.floor(decimalSec1 * 3600);
 
-                    alert(decimalDeg + " deg " + decimalMin + " min " + decimalSec2 + " sec ");
+                    //Symbols and space.
+                    const degSymbol = String.fromCharCode(176, 32);
+                    const minSymbol = String.fromCharCode(39, 32);
+                    const secSymbol = String.fromCharCode(34, 32);
+
+                    ddLatSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
                 }
+
+            //prevents page from reloading and erasing entered numbers.
+            event.preventDefault();
+
         });
 
     },
