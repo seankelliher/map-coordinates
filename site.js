@@ -147,7 +147,19 @@ convert = {
         document.getElementById("convert-decimal-lat").addEventListener("click", function () {
 
             const decimalLat = document.getElementById("decimal-lat").value;
+
+            const decimalLatCheck = /^\d{1,2}.\d{1,17}$/.test(decimalLat);
+
             const decimalLatNum = Number(decimalLat);
+
+            const decimalNorth = document.getElementById("decimal-north").checked;
+            const decimalSouth = document.getElementById("decimal-south").checked;
+
+            const dmsPole = (
+                decimalNorth === true
+                ? "North"
+                : "South"
+            );
 
             const decimalDeg = Math.floor(decimalLatNum);
             const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
