@@ -108,26 +108,30 @@ convert = {
 
             if (degLongCheck === false) {
                     //run function, show error message
-                    alert("error - degrees check is false");
+                    degLongSum.textContent = "Degrees must be numbers only";
                 } else if (minLongCheck === false) {
                     //run function, show error message
-                    alert("error - minutes check is false");
+                    degLongSum.textContent  = "Minutes must be numbers only";
                 } else if (secLongCheck === false) {
                     //run function, show error message
-                    alert("error - seconds check is false");
+                    degLongSum.textContent  = "Seconds must be numbers only";
                 } else if (degLongNum < 1 || degLong > 180) {
                     //run function, show error message
-                    alert("error - degrees not between 1 and 90");
+                    degLongSum.textContent  = "Degrees must be between 1 and 180";
                 } else if (minLongNum < 1 || minLong > 59) {
                     //run function, show error message
-                    alert("error - minutes not between 1 and 59");
+                    degLongSum.textContent  = "Minutes must be between 1 and 59";
                 } else if (secLongNum < 1 || secLong > 59) {
                     //run function, show error message
-                    alert("error - seconds not between 1 and 59");
+                    degLongSum.textContent  = "Seconds must be between 1 and 59";
                 } else {
                     //run function to convert
                     const sum = degLongNum + (minLongNum/60) + (secLongNum/3600);
-                    alert(sum  + " degrees " + dmsPole);
+
+                    //Degree symbol, space, dash, space.
+                    const degSymbol = String.fromCharCode(176, 32, 45, 32);
+                    
+                    degLongSum.textContent  = sum + degSymbol + dmsPole;
             }
 
             //prevents page from reloading and erasing entered numbers.
