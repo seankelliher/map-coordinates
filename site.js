@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     convert.convertDmsLat();
     convert.convertDmsLong();
-    convert.convertDecimalLat();
-    convert.convertDecimalLong();
+    convert.convertDeciLat();
+    convert.convertDeciLong();
 });
 
 //The convert variable (let).
@@ -149,21 +149,21 @@ convert = {
     },
 
     //Convert DD to DMS - Latitude.
-    convertDecimalLat: function () {
+    convertDeciLat: function () {
         "use strict";
 
-        const convert3 = document.getElementById("convert-decimal-lat");
+        const convert3 = document.getElementById("convert-deci-lat");
 
         convert3.addEventListener("click", function (event) {
 
-            //Retrieve the entered decimal degree.
-            const decimalLat = document.getElementById("decimal-lat").value;
+            //Retrieve the entered deci degree.
+            const deciLat = document.getElementById("deci-lat").value;
 
             //Verify that the number is up to 2 digits, dot, up to 17 digits.
-            const decimalLatCheck = /^\d{1,2}.?\d{1,17}$/.test(decimalLat);
+            const deciLatCheck = /^\d{1,2}.?\d{1,17}$/.test(deciLat);
 
             //Convert from string to number.
-            const decimalLatNum = Number(decimalLat);
+            const deciLatNum = Number(deciLat);
 
             //Retrieve the "pole" radio buttons.
             const ddNorth = document.getElementById("dd-north").checked;
@@ -180,16 +180,16 @@ convert = {
             const ddLatSum = document.getElementById("dd-lat-sum");
 
             //Check is entries are all numbers and between certain points.
-            if (decimalLatCheck === false) {
+            if (deciLatCheck === false) {
                     ddLatSum.textContent = "Degrees must be numbers only";
-                } else if (decimalLatNum < 1 || decimalLatNum > 90) {
+                } else if (deciLatNum < 1 || deciLatNum > 90) {
                     ddLatSum.textContent  = "Degrees must be between 1 + 90";
                 } else {
                     //Do the conversion.
-                    const decimalDeg = Math.floor(decimalLatNum);
-                    const decimalMin = Math.floor((decimalLatNum - decimalDeg) * 60);
-                    const decimalSec1 = (decimalLatNum - decimalDeg) - (decimalMin/60);
-                    const decimalSec2 = Math.floor(decimalSec1 * 3600);
+                    const deciDeg = Math.floor(deciLatNum);
+                    const deciMin = Math.floor((deciLatNum - deciDeg) * 60);
+                    const deciSec1 = (deciLatNum - deciDeg) - (deciMin/60);
+                    const deciSec2 = Math.floor(deciSec1 * 3600);
 
                     //Degree symbol, space.
                     const degSymbol = String.fromCharCode(176, 32);
@@ -197,7 +197,7 @@ convert = {
                     const secSymbol = String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLatSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddPole;
+                    ddLatSum.textContent = deciDeg + degSymbol + deciMin + minSymbol + deciSec2 + secSymbol + ddPole;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -208,21 +208,21 @@ convert = {
     },
 
     //Convert DD to DMS - Longitude.
-    convertDecimalLong: function () {
+    convertDeciLong: function () {
         "use strict";
 
-        const convert4 = document.getElementById("convert-decimal-long");
+        const convert4 = document.getElementById("convert-deci-long");
 
         convert4.addEventListener("click", function (event) {
 
-            //Retrieve the entered decimal degree.
-            const decimalLong = document.getElementById("decimal-long").value;
+            //Retrieve the entered deci degree.
+            const deciLong = document.getElementById("deci-long").value;
 
             //Verify that the number is up to 3 digits, dot, up to 17 digits.
-            const decimalLongCheck = /^\d{1,3}.?\d{1,17}$/.test(decimalLong);
+            const deciLongCheck = /^\d{1,3}.?\d{1,17}$/.test(deciLong);
 
             //Convert from string to number.
-            const decimalLongNum = Number(decimalLong);
+            const deciLongNum = Number(deciLong);
 
             //Retrieve the "meridian" radio buttons.
             const ddEast = document.getElementById("dd-east").checked;
@@ -239,16 +239,16 @@ convert = {
             const ddLongSum = document.getElementById("dd-long-sum");
 
             //Check is entries are all numbers and between certain points.
-            if (decimalLongCheck === false) {
+            if (deciLongCheck === false) {
                     ddLongSum.textContent = "Degrees must be numbers only";
-                } else if (decimalLongNum < 1 || decimalLongNum > 180) {
+                } else if (deciLongNum < 1 || deciLongNum > 180) {
                     ddLongSum.textContent  = "Degrees must be between 1 + 180";
                 } else {
                     //Do the conversion.
-                    const decimalDeg = Math.floor(decimalLongNum);
-                    const decimalMin = Math.floor((decimalLongNum - decimalDeg) * 60);
-                    const decimalSec1 = (decimalLongNum - decimalDeg) - (decimalMin/60);
-                    const decimalSec2 = Math.floor(decimalSec1 * 3600);
+                    const deciDeg = Math.floor(deciLongNum);
+                    const deciMin = Math.floor((deciLongNum - deciDeg) * 60);
+                    const deciSec1 = (deciLongNum - deciDeg) - (deciMin/60);
+                    const deciSec2 = Math.floor(deciSec1 * 3600);
 
                     //Degree symbol, space.
                     const degSymbol = String.fromCharCode(176, 32);
@@ -256,7 +256,7 @@ convert = {
                     const secSymbol = String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLongSum.textContent = decimalDeg + degSymbol + decimalMin + minSymbol + decimalSec2 + secSymbol + ddMeridian;
+                    ddLongSum.textContent = deciDeg + degSymbol + deciMin + minSymbol + deciSec2 + secSymbol + ddMeridian;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
