@@ -104,12 +104,12 @@ convert = {
             const minLonNum = Number(minLon);
             const secLonNum = Number(secLon);
 
-            //Retrieve the "meridian" radio buttons.
+            //Retrieve the "gmt" radio buttons.
             const dmsEast = document.getElementById("dms-east").checked;
             const dmsWest = document.getElementById("dms-west").checked;
 
             //Discover which one is checked.
-            const dmsMeridian = (
+            const dmsGmt = (
                 dmsEast === true
                 ? "East"
                 : "West"
@@ -139,7 +139,7 @@ convert = {
                     const degSymbol = String.fromCharCode(176, 32);
 
                     //Place the result.
-                    dmsLonSum.textContent  = sum + degSymbol + dmsMeridian;
+                    dmsLonSum.textContent  = sum + degSymbol + dmsGmt;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -224,12 +224,12 @@ convert = {
             //Convert from string to number.
             const deciLonNum = Number(deciLon);
 
-            //Retrieve the "meridian" radio buttons.
+            //Retrieve the "gmt" radio buttons.
             const ddEast = document.getElementById("dd-east").checked;
             const ddWest = document.getElementById("dd-west").checked;
 
             //Discover which one is checked.
-            const ddMeridian = (
+            const ddGmt = (
                 ddEast === true
                 ? "East"
                 : "West"
@@ -256,7 +256,7 @@ convert = {
                     const secSum = deciSec2 + String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLonSum.textContent = degSum + minSum + secSum + ddMeridian;
+                    ddLonSum.textContent = degSum + minSum + secSum + ddGmt;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
