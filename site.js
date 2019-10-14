@@ -18,7 +18,9 @@ convert = {
     convertDmsLat: function () {
         "use strict";
 
-        document.getElementById("convert-dms-lat").addEventListener("click", function (event) {
+        const convert1 = document.getElementById("convert-dms-lat");
+
+        convert1.addEventListener("click", function (event) {
 
             //Retrieve the entered degrees, minutes, seconds.
             const degLat = document.getElementById("deg-lat").value;
@@ -68,7 +70,7 @@ convert = {
 
                     //Degree symbol, space.
                     const degSymbol = String.fromCharCode(176, 32);
-                    
+
                     //Place the result.
                     dmsLatSum.textContent  = sum + degSymbol + dmsPole;
             }
@@ -83,7 +85,9 @@ convert = {
     convertDmsLong: function () {
         "use strict";
 
-        document.getElementById("convert-dms-long").addEventListener("click", function (event) {
+        const convert2 = document.getElementById("convert-dms-long");
+
+        convert2.addEventListener("click", function (event) {
 
             //Retrieve the entered degrees, minutes, seconds.
             const degLong = document.getElementById("deg-long").value;
@@ -148,7 +152,9 @@ convert = {
     convertDecimalLat: function () {
         "use strict";
 
-        document.getElementById("convert-decimal-lat").addEventListener("click", function (event) {
+        const convert3 = document.getElementById("convert-decimal-lat");
+
+        convert3.addEventListener("click", function (event) {
 
             //Retrieve the entered decimal degree.
             const decimalLat = document.getElementById("decimal-lat").value;
@@ -205,7 +211,9 @@ convert = {
     convertDecimalLong: function () {
         "use strict";
 
-        document.getElementById("convert-decimal-long").addEventListener("click", function (event) {
+        const convert4 = document.getElementById("convert-decimal-long");
+
+        convert4.addEventListener("click", function (event) {
 
             //Retrieve the entered decimal degree.
             const decimalLong = document.getElementById("decimal-long").value;
