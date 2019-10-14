@@ -29,29 +29,41 @@
 
                     <h2>Convert DMS to DD - Latitude</h2>
 
-                    <label for="deg-lat">
-                        <input type="text" id="deg-lat" name="deg-lat" required minlength="1" maxlength="2" size="2">degrees
-                    </label>
+                    <fieldset class="border">
 
-                    <label for="min-lat">
-                        <input type="text" id="min-lat" name="min-lat" required minlength="1" maxlength="2" size="2">minutes
-                    </label>
+                        <label for="deg-lat">
+                            <input type="text" id="deg-lat" name="deg-lat" required minlength="1" maxlength="2" size="2">deg
+                        </label>
 
-                    <label for="sec-lat">
-                        <input type="text" id="sec-lat" name="sec-lat" required minlength="1" maxlength="2" size="2">seconds
-                    </label>
+                        <label for="min-lat">
+                            <input type="text" id="min-lat" name="min-lat" required minlength="1" maxlength="2" size="2">min
+                        </label>
 
-                    <label for="dms-north">
-                        <input type="radio" id="dms-north" name="dms-pole" checked>North
-                    </label>
+                        <label for="sec-lat">
+                            <input type="text" id="sec-lat" name="sec-lat" required minlength="1" maxlength="2" size="2">sec
+                        </label>
 
-                    <label for="dms-south">
-                        <input type="radio" id="dms-south" name="dms-pole">South
-                    </label>
+                    </fieldset>
 
-                    <button id="dms-lat-btn">Convert</button>
+                    <fieldset class="border">
 
-                    <p id="dms-lat-sum" class="sum">Result:</p>
+                        <label for="dms-north">
+                            <input type="radio" id="dms-north" name="dms-pole" checked>North
+                        </label>
+
+                        <label for="dms-south">
+                            <input type="radio" id="dms-south" name="dms-pole">South
+                        </label>
+
+                        <button id="dms-lat-btn">Convert</button>
+
+                    </fieldset>
+
+                    <fieldset class="no-border">
+
+                        <p id="dms-lat-sum" class="sum">Result:</p>
+
+                    </fieldset>
 
                 </form>
 
@@ -59,29 +71,41 @@
 
                     <h2>Convert DMS to DD - Longitude </h2>
 
-                    <label for="deg-lon">
-                        <input type="text" id="deg-lon" name="deg-lon" required minlength="1" maxlength="3" size="3">degrees
-                    </label>
+                    <fieldset class="border">
 
-                    <label for="min-lon">
-                        <input type="text" id="min-lon" name="min-lon" required minlength="1" maxlength="2" size="2">minutes
-                    </label>
+                        <label for="deg-lon">
+                            <input type="text" id="deg-lon" name="deg-lon" required minlength="1" maxlength="3" size="3">deg
+                        </label>
 
-                    <label for="sec-lon">
-                        <input type="text" id="sec-lon" name="sec-lon" required minlength="1" maxlength="2" size="2">seconds
-                    </label>
+                        <label for="min-lon">
+                            <input type="text" id="min-lon" name="min-lon" required minlength="1" maxlength="2" size="2">min
+                        </label>
 
-                    <label for="dms-east">
-                        <input type="radio" id="dms-east" name="dms-gmt" checked>East
-                    </label>
+                        <label for="sec-lon">
+                            <input type="text" id="sec-lon" name="sec-lon" required minlength="1" maxlength="2" size="2">sec
+                        </label>
 
-                    <label for="dms-west">
-                        <input type="radio" id="dms-west" name="dms-gmt">West
-                    </label>
+                    </fieldset>
 
-                    <button id="dms-lon-btn">Convert</button>
+                    <fieldset class="border">
 
-                    <p id="dms-lon-sum" class="sum">Result:</p>
+                        <label for="dms-east">
+                            <input type="radio" id="dms-east" name="dms-gmt" checked>East
+                        </label>
+
+                        <label for="dms-west">
+                            <input type="radio" id="dms-west" name="dms-gmt">West
+                        </label>
+
+                        <button id="dms-lon-btn">Convert</button>
+
+                    </fieldset>
+
+                    <fieldset class="no-border">
+
+                        <p id="dms-lon-sum" class="sum">Result:</p>
+
+                    </fieldset>
 
                 </form>
 
@@ -89,21 +113,33 @@
 
                     <h2>Convert DD to DMS - Latitude</h2>
 
-                    <label for="deci-lat">
-                        <input type="text" id="deci-lat" name="deci-lat" required minlength="5" maxlength="20" size="20">decimal degrees
-                    </label>
+                    <fieldset class="border">
 
-                    <label for="dd-north">
-                        <input type="radio" id="dd-north" name="dd-pole" checked>North
-                    </label>
+                        <label for="deci-lat">
+                            <input type="text" id="deci-lat" name="deci-lat" required minlength="5" maxlength="20" size="20">decimal deg
+                        </label>
 
-                    <label for="dd-south">
-                        <input type="radio" id="dd-south" name="dd-pole">South
-                    </label>
+                    </fieldset>
 
-                    <button id="dd-lat-btn">Convert</button>
+                    <fieldset class="border">
 
-                    <p id="dd-lat-sum" class="sum">Result:</p>
+                        <label for="dd-north">
+                            <input type="radio" id="dd-north" name="dd-pole" checked>North
+                        </label>
+
+                        <label for="dd-south">
+                            <input type="radio" id="dd-south" name="dd-pole">South
+                        </label>
+
+                        <button id="dd-lat-btn">Convert</button>
+
+                    </fieldset>
+
+                    <fieldset class="no-border">
+
+                        <p id="dd-lat-sum" class="sum">Result:</p>
+
+                    </fieldset>
 
                 </form>
 
@@ -111,21 +147,33 @@
 
                     <h2>Convert DD to DMS - Longitude</h2>
 
-                    <label for="deci-lon">
-                        <input type="text" id="deci-lon" name="deci-lon" required minlength="5" maxlength="21" size="21">decimal degrees
-                    </label>
+                    <fieldset class="border">
 
-                    <label for="dd-east">
-                        <input type="radio" id="dd-east" name="dd-gmt" checked>East
-                    </label>
+                        <label for="deci-lon">
+                            <input type="text" id="deci-lon" name="deci-lon" required minlength="5" maxlength="21" size="21">decimal deg
+                        </label>
 
-                    <label for="dd-west">
-                        <input type="radio" id="dd-west" name="dd-gmt">West
-                    </label>
+                    </fieldset>
 
-                    <button id="dd-lon-btn">Convert</button>
+                    <fieldset class="border">
 
-                    <p id="dd-lon-sum" class="sum">Result:</p>
+                        <label for="dd-east">
+                            <input type="radio" id="dd-east" name="dd-gmt" checked>East
+                        </label>
+
+                        <label for="dd-west">
+                            <input type="radio" id="dd-west" name="dd-gmt">West
+                        </label>
+
+                        <button id="dd-lon-btn">Convert</button>
+
+                    </fieldset>
+
+                    <fieldset class="no-border">
+
+                        <p id="dd-lon-sum" class="sum">Result:</p>
+
+                    </fieldset>
 
                 </form>
 
