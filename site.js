@@ -199,19 +199,8 @@ convert = {
             } else if (deciLatNum < 1 || deciLatNum > 90) {
                 ddLatResult.textContent = "Degrees must be between 1 + 90";
             } else {
-                //Do the conversion.
-                const deciDeg = Math.floor(deciLatNum);
-                const deciMin = Math.floor((deciLatNum - deciDeg) * 60);
-                const deciSec1 = (deciLatNum - deciDeg) - (deciMin / 60);
-                const deciSec2 = Math.floor(deciSec1 * 3600);
-
-                //Degree symbol, space.
-                const degSum = deciDeg + String.fromCharCode(176, 32);
-                const minSum = deciMin + String.fromCharCode(39, 32);
-                const secSum = deciSec2 + String.fromCharCode(34, 32);
-
-                //Place the result.
-                ddLatResult.textContent = degSum + minSum + secSum + ddPole;
+                //Invoke function that does conversion math, pass parameters.
+                convert.ddBothMath(deciLatNum, ddPole, ddLatResult);
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -258,19 +247,8 @@ convert = {
             } else if (deciLonNum < 1 || deciLonNum > 180) {
                 ddLonResult.textContent = "Degrees must be between 1 + 180";
             } else {
-                //Do the conversion.
-                const deciDeg = Math.floor(deciLonNum);
-                const deciMin = Math.floor((deciLonNum - deciDeg) * 60);
-                const deciSec1 = (deciLonNum - deciDeg) - (deciMin / 60);
-                const deciSec2 = Math.floor(deciSec1 * 3600);
-
-                //Degree symbol, space.
-                const degSum = deciDeg + String.fromCharCode(176, 32);
-                const minSum = deciMin + String.fromCharCode(39, 32);
-                const secSum = deciSec2 + String.fromCharCode(34, 32);
-
-                //Place the result.
-                ddLonResult.textContent = degSum + minSum + secSum + ddGmt;
+                //Invoke function that does conversion math, pass parameters.
+                convert.ddBothMath(deciLonNum, ddGmt, ddLonResult);
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -278,6 +256,25 @@ convert = {
 
         });
 
+    },
+
+    //DD to DMS - Math for both Latitude and Longitude
+    ddBothMath: function (deciNum, poleGmt, result) {
+        "use strict";
+
+        //Do the conversion.
+        const deciDeg = Math.floor(deciNum);
+        const deciMin = Math.floor((deciNum - deciDeg) * 60);
+        const deciSec1 = (deciNum - deciDeg) - (deciMin / 60);
+        const deciSec2 = Math.floor(deciSec1 * 3600);
+
+        //Degree symbol, space.
+        const degSum = deciDeg + String.fromCharCode(176, 32);
+        const minSum = deciMin + String.fromCharCode(39, 32);
+        const secSum = deciSec2 + String.fromCharCode(34, 32);
+
+        //Place the result.
+        result.textContent = degSum + minSum + secSum + poleGmt;
     }
 
 }; //close convert
