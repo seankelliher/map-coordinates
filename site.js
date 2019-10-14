@@ -256,18 +256,6 @@ convert = {
 
         });
 
-    },
-
-    functionThree: function () {
-        "use strict";
-
-        //add function content
-    },
-
-    functionFour: function () {
-        "use strict";
-
-        //add function content
     }
 
 }; //close convert
