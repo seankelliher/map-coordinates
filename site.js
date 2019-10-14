@@ -5,17 +5,17 @@ let convert;
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    convert.convertDmsLat();
-    convert.convertDmsLon();
-    convert.convertDeciLat();
-    convert.convertDeciLon();
+    convert.dmsLatCheck();
+    convert.dmsLonCheck();
+    convert.ddLatCheck();
+    convert.ddLonCheck();
 });
 
 //The convert variable (let).
 convert = {
 
     //Convert DMS to DD - Latitude.
-    convertDmsLat: function () {
+    dmsLatCheck: function () {
         "use strict";
 
         const convert1 = document.getElementById("convert-dms-lat");
@@ -82,7 +82,7 @@ convert = {
     },
 
     //Convert DMS to DD - Lonitude
-    convertDmsLon: function () {
+    dmsLonCheck: function () {
         "use strict";
 
         const convert2 = document.getElementById("convert-dms-lon");
@@ -149,7 +149,7 @@ convert = {
     },
 
     //Convert DD to DMS - Latitude.
-    convertDeciLat: function () {
+    ddLatCheck: function () {
         "use strict";
 
         const convert3 = document.getElementById("convert-deci-lat");
@@ -208,7 +208,7 @@ convert = {
     },
 
     //Convert DD to DMS - Lonitude.
-    convertDeciLon: function () {
+    ddLonCheck: function () {
         "use strict";
 
         const convert4 = document.getElementById("convert-deci-lon");
