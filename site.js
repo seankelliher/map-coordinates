@@ -192,12 +192,12 @@ convert = {
                     const deciSec2 = Math.floor(deciSec1 * 3600);
 
                     //Degree symbol, space.
-                    const degSymbol = String.fromCharCode(176, 32);
-                    const minSymbol = String.fromCharCode(39, 32);
-                    const secSymbol = String.fromCharCode(34, 32);
+                    const degSum = deciDeg + String.fromCharCode(176, 32);
+                    const minSum = deciMin + String.fromCharCode(39, 32);
+                    const secSum = deciSec2 + String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLatSum.textContent = deciDeg + degSymbol + deciMin + minSymbol + deciSec2 + secSymbol + ddPole;
+                    ddLatSum.textContent = degSum + minSum + secSum + ddPole;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -251,12 +251,12 @@ convert = {
                     const deciSec2 = Math.floor(deciSec1 * 3600);
 
                     //Degree symbol, space.
-                    const degSymbol = String.fromCharCode(176, 32);
-                    const minSymbol = String.fromCharCode(39, 32);
-                    const secSymbol = String.fromCharCode(34, 32);
+                    const degSum = deciDeg + String.fromCharCode(176, 32);
+                    const minSum = deciMin + String.fromCharCode(39, 32);
+                    const secSum = deciSec2 + String.fromCharCode(34, 32);
 
                     //Place the result.
-                    ddLonSum.textContent = deciDeg + degSymbol + deciMin + minSymbol + deciSec2 + secSymbol + ddMeridian;
+                    ddLonSum.textContent = degSum + minSum + secSum + ddMeridian;
                 }
 
             //Prevents page from reloading and erasing entered numbers.
