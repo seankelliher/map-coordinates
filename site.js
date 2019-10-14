@@ -177,13 +177,13 @@ convert = {
             );
 
             //Retrieve element where result will be placed.
-            const ddLatSum = document.getElementById("dd-lat-sum");
+            const ddLatResult = document.getElementById("dd-lat-sum");
 
             //Check is entries are all numbers and between certain points.
             if (deciLatCheck === false) {
-                ddLatSum.textContent = "Degrees must be numbers only";
+                ddLatResult.textContent = "Degrees must be numbers only";
             } else if (deciLatNum < 1 || deciLatNum > 90) {
-                ddLatSum.textContent = "Degrees must be between 1 + 90";
+                ddLatResult.textContent = "Degrees must be between 1 + 90";
             } else {
                 //Do the conversion.
                 const deciDeg = Math.floor(deciLatNum);
@@ -197,7 +197,7 @@ convert = {
                 const secSum = deciSec2 + String.fromCharCode(34, 32);
 
                 //Place the result.
-                ddLatSum.textContent = degSum + minSum + secSum + ddPole;
+                ddLatResult.textContent = degSum + minSum + secSum + ddPole;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -236,13 +236,13 @@ convert = {
             );
 
             //Retrieve element where result will be placed.
-            const ddLonSum = document.getElementById("dd-lon-sum");
+            const ddLonResult = document.getElementById("dd-lon-sum");
 
             //Check is entries are all numbers and between certain points.
             if (deciLonCheck === false) {
-                ddLonSum.textContent = "Degrees must be numbers only";
+                ddLonResult.textContent = "Degrees must be numbers only";
             } else if (deciLonNum < 1 || deciLonNum > 180) {
-                ddLonSum.textContent = "Degrees must be between 1 + 180";
+                ddLonResult.textContent = "Degrees must be between 1 + 180";
             } else {
                 //Do the conversion.
                 const deciDeg = Math.floor(deciLonNum);
@@ -256,7 +256,7 @@ convert = {
                 const secSum = deciSec2 + String.fromCharCode(34, 32);
 
                 //Place the result.
-                ddLonSum.textContent = degSum + minSum + secSum + ddGmt;
+                ddLonResult.textContent = degSum + minSum + secSum + ddGmt;
             }
 
             //Prevents page from reloading and erasing entered numbers.
