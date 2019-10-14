@@ -65,14 +65,14 @@ convert = {
             } else if (secLatNum < 1 || secLat > 59) {
                 dmsLatResult.textContent = "Seconds must be between 1 + 59";
             } else {
-                //Do the conversion.
-                const sum = degLatNum + (minLatNum / 60) + (secLatNum / 3600);
-
-                //Degree symbol, space.
-                const degSymbol = String.fromCharCode(176, 32);
-
-                //Place the result.
-                dmsLatResult.textContent = sum + degSymbol + dmsPole;
+                //Invoke function that does conversion math, pass parameters.
+                convert.dmsBothMath(
+                    degLatNum,
+                    minLatNum,
+                    secLatNum,
+                    dmsPole,
+                    dmsLatResult
+                );
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -81,7 +81,7 @@ convert = {
         });
     },
 
-    //Convert DMS to DD - Lonitude
+    //Convert DMS to DD - Longitude
     dmsLonCheck: function () {
         "use strict";
 
@@ -132,20 +132,34 @@ convert = {
             } else if (secLonNum < 1 || secLon > 59) {
                 dmsLonResult.textContent = "Seconds must be between 1 + 59";
             } else {
-                //Do the conversion.
-                const sum = degLonNum + (minLonNum / 60) + (secLonNum / 3600);
-
-                //Degree symbol, space.
-                const degSymbol = String.fromCharCode(176, 32);
-
-                //Place the result.
-                dmsLonResult.textContent = sum + degSymbol + dmsGmt;
+                //Invoke function that does conversion math, pass parameters.
+                convert.dmsBothMath(
+                    degLonNum,
+                    minLonNum,
+                    secLonNum,
+                    dmsGmt,
+                    dmsLonResult
+                );
             }
 
             //Prevents page from reloading and erasing entered numbers.
             event.preventDefault();
 
         });
+    },
+
+    //DMS to DD - Math for both Latitude and Longitude
+    dmsBothMath: function (deg, min, sec, poleGmt, result) {
+        "use strict";
+
+        //Do the conversion.
+        const sum = deg + (min / 60) + (sec / 3600);
+
+        //Degree symbol, space.
+        const degSymbol = String.fromCharCode(176, 32);
+
+        //Place the result.
+        result.textContent = sum + degSymbol + poleGmt;
     },
 
     //Convert DD to DMS - Latitude.
@@ -207,7 +221,7 @@ convert = {
 
     },
 
-    //Convert DD to DMS - Lonitude.
+    //Convert DD to DMS - Longitude.
     ddLonCheck: function () {
         "use strict";
 
