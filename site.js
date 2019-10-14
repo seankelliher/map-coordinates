@@ -116,21 +116,21 @@ convert = {
             );
 
             //Retrieve element where result will be placed.
-            const dmsLonSum = document.getElementById("dms-lon-sum");
+            const dmsLonResult = document.getElementById("dms-lon-sum");
 
             //Check is entries are all numbers and between certain points.
             if (degLonCheck === false) {
-                dmsLonSum.textContent = "Degrees must be numbers only";
+                dmsLonResult.textContent = "Degrees must be numbers only";
             } else if (minLonCheck === false) {
-                dmsLonSum.textContent = "Minutes must be numbers only";
+                dmsLonResult.textContent = "Minutes must be numbers only";
             } else if (secLonCheck === false) {
-                dmsLonSum.textContent = "Seconds must be numbers only";
+                dmsLonResult.textContent = "Seconds must be numbers only";
             } else if (degLonNum < 1 || degLon > 180) {
-                dmsLonSum.textContent = "Degrees must be between 1 + 180";
+                dmsLonResult.textContent = "Degrees must be between 1 + 180";
             } else if (minLonNum < 1 || minLon > 59) {
-                dmsLonSum.textContent = "Minutes must be between 1 + 59";
+                dmsLonResult.textContent = "Minutes must be between 1 + 59";
             } else if (secLonNum < 1 || secLon > 59) {
-                dmsLonSum.textContent = "Seconds must be between 1 + 59";
+                dmsLonResult.textContent = "Seconds must be between 1 + 59";
             } else {
                 //Do the conversion.
                 const sum = degLonNum + (minLonNum / 60) + (secLonNum / 3600);
@@ -139,7 +139,7 @@ convert = {
                 const degSymbol = String.fromCharCode(176, 32);
 
                 //Place the result.
-                dmsLonSum.textContent = sum + degSymbol + dmsGmt;
+                dmsLonResult.textContent = sum + degSymbol + dmsGmt;
             }
 
             //Prevents page from reloading and erasing entered numbers.
