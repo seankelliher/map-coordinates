@@ -39,7 +39,7 @@ convert = {
 
             //Retrieve the "pole" radio buttons.
             const dmsNorth = document.getElementById("dms-north").checked;
-            const dmsSouth = document.getElementById("dms-south").checked;
+            //const dmsSouth = document.getElementById("dms-south").checked;
 
             //Discover which one is checked.
             const dmsPole = (
@@ -53,26 +53,26 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (degLatCheck === false) {
-                    dmsLatSum.textContent = "Degrees must be numbers only";
-                } else if (minLatCheck === false) {
-                    dmsLatSum.textContent  = "Minutes must be numbers only";
-                } else if (secLatCheck === false) {
-                    dmsLatSum.textContent  = "Seconds must be numbers only";
-                } else if (degLatNum < 1 || degLat > 90) {
-                    dmsLatSum.textContent  = "Degrees must be between 1 + 90";
-                } else if (minLatNum < 1 || minLat > 59) {
-                    dmsLatSum.textContent  = "Minutes must be between 1 + 59";
-                } else if (secLatNum < 1 || secLat > 59) {
-                    dmsLatSum.textContent = "Seconds must be between 1 + 59";
-                } else {
-                    //Do the conversion.
-                    const sum = degLatNum + (minLatNum/60) + (secLatNum/3600);
+                dmsLatSum.textContent = "Degrees must be numbers only";
+            } else if (minLatCheck === false) {
+                dmsLatSum.textContent = "Minutes must be numbers only";
+            } else if (secLatCheck === false) {
+                dmsLatSum.textContent = "Seconds must be numbers only";
+            } else if (degLatNum < 1 || degLat > 90) {
+                dmsLatSum.textContent = "Degrees must be between 1 + 90";
+            } else if (minLatNum < 1 || minLat > 59) {
+                dmsLatSum.textContent = "Minutes must be between 1 + 59";
+            } else if (secLatNum < 1 || secLat > 59) {
+                dmsLatSum.textContent = "Seconds must be between 1 + 59";
+            } else {
+                //Do the conversion.
+                const sum = degLatNum + (minLatNum / 60) + (secLatNum / 3600);
 
-                    //Degree symbol, space.
-                    const degSymbol = String.fromCharCode(176, 32);
+                //Degree symbol, space.
+                const degSymbol = String.fromCharCode(176, 32);
 
-                    //Place the result.
-                    dmsLatSum.textContent  = sum + degSymbol + dmsPole;
+                //Place the result.
+                dmsLatSum.textContent = sum + degSymbol + dmsPole;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -106,7 +106,7 @@ convert = {
 
             //Retrieve the "gmt" radio buttons.
             const dmsEast = document.getElementById("dms-east").checked;
-            const dmsWest = document.getElementById("dms-west").checked;
+            //const dmsWest = document.getElementById("dms-west").checked;
 
             //Discover which one is checked.
             const dmsGmt = (
@@ -120,26 +120,26 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (degLonCheck === false) {
-                    dmsLonSum.textContent = "Degrees must be numbers only";
-                } else if (minLonCheck === false) {
-                    dmsLonSum.textContent  = "Minutes must be numbers only";
-                } else if (secLonCheck === false) {
-                    dmsLonSum.textContent  = "Seconds must be numbers only";
-                } else if (degLonNum < 1 || degLon > 180) {
-                    dmsLonSum.textContent  = "Degrees must be between 1 + 180";
-                } else if (minLonNum < 1 || minLon > 59) {
-                    dmsLonSum.textContent  = "Minutes must be between 1 + 59";
-                } else if (secLonNum < 1 || secLon > 59) {
-                    dmsLonSum.textContent  = "Seconds must be between 1 + 59";
-                } else {
-                    //Do the conversion.
-                    const sum = degLonNum + (minLonNum/60) + (secLonNum/3600);
+                dmsLonSum.textContent = "Degrees must be numbers only";
+            } else if (minLonCheck === false) {
+                dmsLonSum.textContent = "Minutes must be numbers only";
+            } else if (secLonCheck === false) {
+                dmsLonSum.textContent = "Seconds must be numbers only";
+            } else if (degLonNum < 1 || degLon > 180) {
+                dmsLonSum.textContent = "Degrees must be between 1 + 180";
+            } else if (minLonNum < 1 || minLon > 59) {
+                dmsLonSum.textContent = "Minutes must be between 1 + 59";
+            } else if (secLonNum < 1 || secLon > 59) {
+                dmsLonSum.textContent = "Seconds must be between 1 + 59";
+            } else {
+                //Do the conversion.
+                const sum = degLonNum + (minLonNum / 60) + (secLonNum / 3600);
 
-                    //Degree symbol, space.
-                    const degSymbol = String.fromCharCode(176, 32);
+                //Degree symbol, space.
+                const degSymbol = String.fromCharCode(176, 32);
 
-                    //Place the result.
-                    dmsLonSum.textContent  = sum + degSymbol + dmsGmt;
+                //Place the result.
+                dmsLonSum.textContent = sum + degSymbol + dmsGmt;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -167,7 +167,7 @@ convert = {
 
             //Retrieve the "pole" radio buttons.
             const ddNorth = document.getElementById("dd-north").checked;
-            const ddSouth = document.getElementById("dd-south").checked;
+            //const ddSouth = document.getElementById("dd-south").checked;
 
             //Discover which one is checked.
             const ddPole = (
@@ -181,24 +181,24 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLatCheck === false) {
-                    ddLatSum.textContent = "Degrees must be numbers only";
-                } else if (deciLatNum < 1 || deciLatNum > 90) {
-                    ddLatSum.textContent  = "Degrees must be between 1 + 90";
-                } else {
-                    //Do the conversion.
-                    const deciDeg = Math.floor(deciLatNum);
-                    const deciMin = Math.floor((deciLatNum - deciDeg) * 60);
-                    const deciSec1 = (deciLatNum - deciDeg) - (deciMin/60);
-                    const deciSec2 = Math.floor(deciSec1 * 3600);
+                ddLatSum.textContent = "Degrees must be numbers only";
+            } else if (deciLatNum < 1 || deciLatNum > 90) {
+                ddLatSum.textContent = "Degrees must be between 1 + 90";
+            } else {
+                //Do the conversion.
+                const deciDeg = Math.floor(deciLatNum);
+                const deciMin = Math.floor((deciLatNum - deciDeg) * 60);
+                const deciSec1 = (deciLatNum - deciDeg) - (deciMin / 60);
+                const deciSec2 = Math.floor(deciSec1 * 3600);
 
-                    //Degree symbol, space.
-                    const degSum = deciDeg + String.fromCharCode(176, 32);
-                    const minSum = deciMin + String.fromCharCode(39, 32);
-                    const secSum = deciSec2 + String.fromCharCode(34, 32);
+                //Degree symbol, space.
+                const degSum = deciDeg + String.fromCharCode(176, 32);
+                const minSum = deciMin + String.fromCharCode(39, 32);
+                const secSum = deciSec2 + String.fromCharCode(34, 32);
 
-                    //Place the result.
-                    ddLatSum.textContent = degSum + minSum + secSum + ddPole;
-                }
+                //Place the result.
+                ddLatSum.textContent = degSum + minSum + secSum + ddPole;
+            }
 
             //Prevents page from reloading and erasing entered numbers.
             event.preventDefault();
@@ -226,7 +226,7 @@ convert = {
 
             //Retrieve the "gmt" radio buttons.
             const ddEast = document.getElementById("dd-east").checked;
-            const ddWest = document.getElementById("dd-west").checked;
+            //const ddWest = document.getElementById("dd-west").checked;
 
             //Discover which one is checked.
             const ddGmt = (
@@ -240,24 +240,24 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLonCheck === false) {
-                    ddLonSum.textContent = "Degrees must be numbers only";
-                } else if (deciLonNum < 1 || deciLonNum > 180) {
-                    ddLonSum.textContent  = "Degrees must be between 1 + 180";
-                } else {
-                    //Do the conversion.
-                    const deciDeg = Math.floor(deciLonNum);
-                    const deciMin = Math.floor((deciLonNum - deciDeg) * 60);
-                    const deciSec1 = (deciLonNum - deciDeg) - (deciMin/60);
-                    const deciSec2 = Math.floor(deciSec1 * 3600);
+                ddLonSum.textContent = "Degrees must be numbers only";
+            } else if (deciLonNum < 1 || deciLonNum > 180) {
+                ddLonSum.textContent = "Degrees must be between 1 + 180";
+            } else {
+                //Do the conversion.
+                const deciDeg = Math.floor(deciLonNum);
+                const deciMin = Math.floor((deciLonNum - deciDeg) * 60);
+                const deciSec1 = (deciLonNum - deciDeg) - (deciMin / 60);
+                const deciSec2 = Math.floor(deciSec1 * 3600);
 
-                    //Degree symbol, space.
-                    const degSum = deciDeg + String.fromCharCode(176, 32);
-                    const minSum = deciMin + String.fromCharCode(39, 32);
-                    const secSum = deciSec2 + String.fromCharCode(34, 32);
+                //Degree symbol, space.
+                const degSum = deciDeg + String.fromCharCode(176, 32);
+                const minSum = deciMin + String.fromCharCode(39, 32);
+                const secSum = deciSec2 + String.fromCharCode(34, 32);
 
-                    //Place the result.
-                    ddLonSum.textContent = degSum + minSum + secSum + ddGmt;
-                }
+                //Place the result.
+                ddLonSum.textContent = degSum + minSum + secSum + ddGmt;
+            }
 
             //Prevents page from reloading and erasing entered numbers.
             event.preventDefault();
