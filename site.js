@@ -49,21 +49,21 @@ convert = {
             );
 
             //Retrieve element where result will be placed.
-            const dmsLatSum = document.getElementById("dms-lat-sum");
+            const dmsLatResult = document.getElementById("dms-lat-sum");
 
             //Check is entries are all numbers and between certain points.
             if (degLatCheck === false) {
-                dmsLatSum.textContent = "Degrees must be numbers only";
+                dmsLatResult.textContent = "Degrees must be numbers only";
             } else if (minLatCheck === false) {
-                dmsLatSum.textContent = "Minutes must be numbers only";
+                dmsLatResult.textContent = "Minutes must be numbers only";
             } else if (secLatCheck === false) {
-                dmsLatSum.textContent = "Seconds must be numbers only";
+                dmsLatResult.textContent = "Seconds must be numbers only";
             } else if (degLatNum < 1 || degLat > 90) {
-                dmsLatSum.textContent = "Degrees must be between 1 + 90";
+                dmsLatResult.textContent = "Degrees must be between 1 + 90";
             } else if (minLatNum < 1 || minLat > 59) {
-                dmsLatSum.textContent = "Minutes must be between 1 + 59";
+                dmsLatResult.textContent = "Minutes must be between 1 + 59";
             } else if (secLatNum < 1 || secLat > 59) {
-                dmsLatSum.textContent = "Seconds must be between 1 + 59";
+                dmsLatResult.textContent = "Seconds must be between 1 + 59";
             } else {
                 //Do the conversion.
                 const sum = degLatNum + (minLatNum / 60) + (secLatNum / 3600);
@@ -72,7 +72,7 @@ convert = {
                 const degSymbol = String.fromCharCode(176, 32);
 
                 //Place the result.
-                dmsLatSum.textContent = sum + degSymbol + dmsPole;
+                dmsLatResult.textContent = sum + degSymbol + dmsPole;
             }
 
             //Prevents page from reloading and erasing entered numbers.
