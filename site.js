@@ -18,7 +18,7 @@ convert = {
     dmsLatCheck: function () {
         "use strict";
 
-        const convert1 = document.getElementById("convert-dms-lat");
+        const convert1 = document.getElementById("dms-lat-btn");
 
         convert1.addEventListener("click", function (event) {
 
@@ -85,7 +85,7 @@ convert = {
     dmsLonCheck: function () {
         "use strict";
 
-        const convert2 = document.getElementById("convert-dms-lon");
+        const convert2 = document.getElementById("dms-lon-btn");
 
         convert2.addEventListener("click", function (event) {
 
@@ -152,7 +152,7 @@ convert = {
     ddLatCheck: function () {
         "use strict";
 
-        const convert3 = document.getElementById("convert-deci-lat");
+        const convert3 = document.getElementById("dd-lat-btn");
 
         convert3.addEventListener("click", function (event) {
 
@@ -211,7 +211,7 @@ convert = {
     ddLonCheck: function () {
         "use strict";
 
-        const convert4 = document.getElementById("convert-deci-lon");
+        const convert4 = document.getElementById("dd-lon-btn");
 
         convert4.addEventListener("click", function (event) {
 
