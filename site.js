@@ -195,9 +195,9 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLatCheck === false) {
-                ddLatResult.textContent = "Degrees must be numbers only";
+                ddLatResult.textContent = "Numbers only between 1 + 90";
             } else if (deciLatNum < 1 || deciLatNum > 90) {
-                ddLatResult.textContent = "Degrees must be between 1 + 90";
+                ddLatResult.textContent = "Numbers only between 1 + 90";
             } else {
                 //Invoke function that does conversion math, pass parameters.
                 convert.ddBothMath(deciLatNum, ddPole, ddLatResult);
@@ -243,9 +243,9 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLonCheck === false) {
-                ddLonResult.textContent = "Degrees must be numbers only";
+                ddLonResult.textContent = "Numbers only between 1 + 180";
             } else if (deciLonNum < 1 || deciLonNum > 180) {
-                ddLonResult.textContent = "Degrees must be between 1 + 180";
+                ddLonResult.textContent = "Numbers only between 1 + 180";
             } else {
                 //Invoke function that does conversion math, pass parameters.
                 convert.ddBothMath(deciLonNum, ddGmt, ddLonResult);
