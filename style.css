@@ -86,15 +86,16 @@ p {
     font-weight: 400;
 }
 
-label, input {
+label {
     font-family: 'Merriweather', serif;
     line-height: 1.5;
     font-weight: 400;
-    margin-right: .5em;
+    margin: 1em 1.5em 1em 0;
+    padding: .5em 0;
 }
 
 input {
-    margin: 1em .5em 1em 0;
+    margin-right: 1em;
     text-align: center;
 }
 
