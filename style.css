@@ -36,14 +36,6 @@ main::after {
     display: table;
 }
 
-footer {
-    width: 90%;
-    margin: 0;
-    padding: 0 5%;
-    background: #f5f5f5; /*grey 100*/
-    float: left;
-}
-
 form {
     width: 90%;
     margin: 1em 0;
@@ -68,9 +60,34 @@ fieldset {
     border: none;
 }
 
+footer {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    background: #f5f5f5; /*grey 100*/
+    float: left;
+}
+
+h1 {
+    font-family: 'Francois One', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Francois One', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
 label, input {
     font-family: 'Merriweather', serif;
-    font-size: 1em;
     line-height: 1.5;
     font-weight: 400;
     margin-right: .5em;
@@ -85,25 +102,60 @@ button {
     font-family: 'Merriweather', serif;
 }
 
-h1 {
-    font-family: 'Francois One', sans-serif;
-    font-size: 1.6em;
-    line-height: 1.5;
-    font-weight: 400;
+@media all and (min-width: 300px) {
+    h1 {
+        font-size: .875em;
+    }
+
+    h2 {
+        font-size: .675em;
+    }
+
+    p, label, input {
+        font-size: .75em;
+    }
 }
 
-h2 {
-    font-family: 'Francois One', sans-serif;
-    font-size: 1.2em;
-    line-height: 1.5;
-    font-weight: 400;
+@media all and (min-width: 400px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: .875em;
+    }
+
+    p, label, input {
+        font-size: .825em;
+    }
 }
 
-p {
-    font-family: 'Merriweather', serif;
-    font-size: 1em;
-    line-height: 1.8;
-    font-weight: 400;
+@media all and (min-width: 500px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p, label, input {
+        font-size: .875em;
+    }
+}
+
+@media all and (min-width: 800px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p, label, input {
+        font-size: 1em;
+    }
 }
 
 .sum {
