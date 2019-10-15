@@ -174,7 +174,7 @@ convert = {
             const deciLat = document.getElementById("deci-lat").value;
 
             //Verify that the number is up to 2 digits, dot, up to 17 digits.
-            const deciLatCheck = /^\d{1,2}.?\d{1,17}$/.test(deciLat);
+            const deciLatCheck = /^\d{1,2}\.\d{1,17}$/.test(deciLat);
 
             //Convert from string to number.
             const deciLatNum = Number(deciLat);
@@ -222,7 +222,7 @@ convert = {
             const deciLon = document.getElementById("deci-lon").value;
 
             //Verify that the number is up to 3 digits, dot, up to 17 digits.
-            const deciLonCheck = /^\d{1,3}.?\d{1,17}$/.test(deciLon);
+            const deciLonCheck = /^\d{1,3}\.\d{1,17}$/.test(deciLon);
 
             //Convert from string to number.
             const deciLonNum = Number(deciLon);
