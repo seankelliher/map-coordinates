@@ -1,6 +1,6 @@
 # Map Coordinates
 
-Interface where users can convert longitude and latitude coordinates between the Degrees, Minutes, Seconds (DMS) and Digital Degrees (DD) formats.
+Interface where users can convert longitude and latitude coordinates between the Degrees, Minutes, Seconds (DMS) and Digital Degrees (DD) formats. Safeguards ensure users are inputting numbers only and that the numbers are within the allowable range.
 
 ## Authors
 
