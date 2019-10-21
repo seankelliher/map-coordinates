@@ -195,12 +195,23 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLatCheck === false) {
-                ddLatResult.textContent = "Numbers only between 1 + 90";
+                ddLatResult.textContent = "Degrees must be numbers only";
             } else if (deciLatNum < 1 || deciLatNum > 90) {
-                ddLatResult.textContent = "Numbers only between 1 + 90";
+                ddLatResult.textContent = "Degrees must be between 1 + 90";
             } else {
-                //Invoke function that does conversion math, pass parameters.
-                convert.ddBothMath(deciLatNum, ddPole, ddLatResult);
+                //Do the conversion.
+                const deciDeg = Math.floor(deciLatNum);
+                const deciMin = Math.floor((deciLatNum - deciDeg) * 60);
+                const deciSec1 = (deciLatNum - deciDeg) - (deciMin / 60);
+                const deciSec2 = Math.floor(deciSec1 * 3600);
+
+                //Degree symbol, space.
+                const degSum = deciDeg + String.fromCharCode(176, 32);
+                const minSum = deciMin + String.fromCharCode(39, 32);
+                const secSum = deciSec2 + String.fromCharCode(34, 32);
+
+                //Place the result.
+                ddLatResult.textContent = degSum + minSum + secSum + ddPole;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -222,7 +233,7 @@ convert = {
             const deciLon = document.getElementById("deci-lon").value;
 
             //Verify that the number is up to 3 digits, dot, up to 17 digits.
-            const deciLonCheck = /^\d{1,3}\.\d{1,17}$/.test(deciLon);
+            const deciLonCheck = /^\d{1,3}.?\d{1,17}$/.test(deciLon);
 
             //Convert from string to number.
             const deciLonNum = Number(deciLon);
@@ -243,12 +254,23 @@ convert = {
 
             //Check is entries are all numbers and between certain points.
             if (deciLonCheck === false) {
-                ddLonResult.textContent = "Numbers only between 1 + 180";
+                ddLonResult.textContent = "Degrees must be numbers only";
             } else if (deciLonNum < 1 || deciLonNum > 180) {
-                ddLonResult.textContent = "Numbers only between 1 + 180";
+                ddLonResult.textContent = "Degrees must be between 1 + 180";
             } else {
-                //Invoke function that does conversion math, pass parameters.
-                convert.ddBothMath(deciLonNum, ddGmt, ddLonResult);
+                //Do the conversion.
+                const deciDeg = Math.floor(deciLonNum);
+                const deciMin = Math.floor((deciLonNum - deciDeg) * 60);
+                const deciSec1 = (deciLonNum - deciDeg) - (deciMin / 60);
+                const deciSec2 = Math.floor(deciSec1 * 3600);
+
+                //Degree symbol, space.
+                const degSum = deciDeg + String.fromCharCode(176, 32);
+                const minSum = deciMin + String.fromCharCode(39, 32);
+                const secSum = deciSec2 + String.fromCharCode(34, 32);
+
+                //Place the result.
+                ddLonResult.textContent = degSum + minSum + secSum + ddGmt;
             }
 
             //Prevents page from reloading and erasing entered numbers.
@@ -256,25 +278,6 @@ convert = {
 
         });
 
-    },
-
-    //DD to DMS - Math for both Latitude and Longitude
-    ddBothMath: function (deciNum, poleGmt, result) {
-        "use strict";
-
-        //Do the conversion.
-        const deciDeg = Math.floor(deciNum);
-        const deciMin = Math.floor((deciNum - deciDeg) * 60);
-        const deciSec1 = (deciNum - deciDeg) - (deciMin / 60);
-        const deciSec2 = Math.floor(deciSec1 * 3600);
-
-        //Degree symbol, space.
-        const degSum = deciDeg + String.fromCharCode(176, 32);
-        const minSum = deciMin + String.fromCharCode(39, 32);
-        const secSum = deciSec2 + String.fromCharCode(34, 32);
-
-        //Place the result.
-        result.textContent = degSum + minSum + secSum + poleGmt;
     }
 
 }; //close convert
