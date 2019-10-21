@@ -233,7 +233,7 @@ convert = {
             const deciLon = document.getElementById("deci-lon").value;
 
             //Verify that the number is up to 3 digits, dot, up to 17 digits.
-            const deciLonCheck = /^\d{1,3}.?\d{1,17}$/.test(deciLon);
+            const deciLonCheck = /^\d{1,3}\.\d{1,17}$/.test(deciLon);
 
             //Convert from string to number.
             const deciLonNum = Number(deciLon);
