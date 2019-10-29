@@ -91,7 +91,7 @@ button {
     font-family: 'Merriweather', serif;
     color: #006db3; /*light blue 600 dark*/
     background: transparent;
-    border: 1px solid #006db3; /*light blue 600 dark*/
+    border: 1px solid #e3f2fd; /*blue 50*/
     border-radius: .5em;
     padding: .5em 1em;
 }
