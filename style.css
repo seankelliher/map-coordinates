@@ -92,6 +92,8 @@ button {
     color: #006db3; /*light blue 600 dark*/
     background: transparent;
     border: 1px solid #006db3; /*light blue 600 dark*/
+    border-radius: .5em;
+    padding: .5em 1em;
 }
 
 @media all and (min-width: 300px) {
