@@ -96,6 +96,11 @@ button {
     padding: .5em 1em;
 }
 
+button:hover {
+    cursor: pointer;
+    background: #e3f2fd; /*blue 50*/ 
+}
+
 @media all and (min-width: 300px) {
     h1 {
         font-size: .875em;
