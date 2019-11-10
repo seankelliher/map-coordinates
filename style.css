@@ -78,31 +78,32 @@ p {
 }
 
 label {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    margin: 1em 1.5em 1em 0;
-    padding: .5em 0;
+    margin-right: 1em;
+    padding: 0;
 }
 
 input {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
     margin-right: 1em;
     text-align: center;
+    border: 2px solid #f5f5f5; /*grey 100*/
 }
 
 button {
-    font-family: 'Merriweather', serif;
-    color: #006db3; /*light blue 600 dark*/
-    background: transparent;
-    border: 1px solid #e3f2fd; /*blue 50*/
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #ef5350; /*red 400*/
+    border: 1px solid #f5f5f5; /*grey 100*/
     border-radius: .5em;
     padding: .5em 1em;
 }
 
 button:hover {
     cursor: pointer;
-    background: #e3f2fd; /*blue 50*/ 
+    text-decoration: underline;
 }
 
 @media all and (min-width: 300px) {
