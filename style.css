@@ -20,11 +20,13 @@ header {
 }
 
 form {
-    width: 90%;
-    margin: 1em 0;
-    padding: .5em 5% 1.5em 5%; /*evens pace at top and bottom*/
-    float: left;
-    background: #fff;
+    width: 95%;
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding: .5em 2.5%;
+    border: 1px solid #29b6f6; /*light blue 400*/
+    flex: initial; /*flex: 0 1 auto*/
+    /*margins-left + right, set by flexbox*/
 }
 
 fieldset {
