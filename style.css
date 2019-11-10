@@ -19,14 +19,6 @@ header {
     /*margins-left + right, set by flexbox*/
 }
 
-main {
-    width: 90%;
-    margin: 0;
-    padding: 0 5%;
-    background: #fafafa; /*grey 50*/
-    float: left;
-}
-
 form {
     width: 90%;
     margin: 1em 0;
