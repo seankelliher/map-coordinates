@@ -72,6 +72,11 @@ p {
     font-weight: 400;
 }
 
+/*Where "result" is displayed.*/
+.sum {
+    color: #006db3; /*light blue 600 dark*/
+}
+
 label {
     font-family: 'Merriweather', serif;
     line-height: 1.5;
@@ -154,8 +159,4 @@ button:hover {
     p, label, input {
         font-size: 1em;
     }
-}
-
-.sum {
-    color: #006db3; /*light blue 600 dark*/
 }
