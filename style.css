@@ -1,9 +1,12 @@
 #container {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0;
-    display: flow-root;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /*main axis*/
+    align-items: flex-start; /*cross axis*/
 }
 
 header {
