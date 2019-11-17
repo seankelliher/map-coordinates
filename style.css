@@ -57,13 +57,13 @@ footer {
 h1 {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h2 {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 p {
@@ -87,6 +87,8 @@ label {
 
 input {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
     margin-right: 1em;
     text-align: center;
     border: 2px solid #f5f5f5; /*grey 100*/
@@ -94,6 +96,8 @@ input {
 
 button {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
     color: #fff;
     background: #ef5350; /*red 400*/
     border: 1px solid #f5f5f5; /*grey 100*/
