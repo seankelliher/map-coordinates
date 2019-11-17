@@ -119,7 +119,7 @@ button:hover {
         font-size: .675em;
     }
 
-    p, label, input {
+    p, label, input, button {
         font-size: .75em;
     }
 }
@@ -133,7 +133,7 @@ button:hover {
         font-size: .875em;
     }
 
-    p, label, input {
+    p, label, input, button {
         font-size: .825em;
     }
 }
@@ -147,7 +147,7 @@ button:hover {
         font-size: 1em;
     }
 
-    p, label, input {
+    p, label, input, button {
         font-size: .875em;
     }
 }
@@ -161,7 +161,7 @@ button:hover {
         font-size: 1.2em;
     }
 
-    p, label, input {
+    p, label, input, button {
         font-size: 1em;
     }
 }
