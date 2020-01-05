@@ -78,7 +78,7 @@ p {
 }
 
 label {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     line-height: 1.5;
     font-weight: 400;
     margin-right: 1em;
@@ -86,7 +86,7 @@ label {
 }
 
 input {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     line-height: 1.5;
     font-weight: 400;
     margin-right: 1em;
@@ -95,7 +95,7 @@ input {
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     line-height: 1.5;
     font-weight: 400;
     color: #fff;
