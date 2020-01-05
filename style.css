@@ -14,7 +14,7 @@ header {
     margin-top: 0;
     margin-bottom: 1em;
     padding: .5em 2.5%;
-    background: #29b6f6; /*light blue 400*/
+    background: #bbdefb; /*blue 100*/
     flex: initial; /*flex: 0 1 auto*/
     /*margins-left + right, set by flexbox*/
 }
