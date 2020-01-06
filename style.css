@@ -22,7 +22,7 @@ header {
 form {
     width: 95%;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     padding: .5em 2.5%;
     border-right: 1px solid #e0e0e0; /*grey 300*/
     border-left: 1px solid #e0e0e0; /*grey 300*/
