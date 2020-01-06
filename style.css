@@ -31,6 +31,10 @@ form {
     /*margins-left + right, set by flexbox*/
 }
 
+form:last-of-type {
+    border-bottom: none;
+}
+
 fieldset {
     margin: .5em 0;
     padding: .5em 0;
