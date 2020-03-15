@@ -59,7 +59,7 @@ convert = {
             } else if (secLatCheck === false) {
                 dmsLatResult.textContent = "Seconds must be numbers only";
             } else if (degLatNum < 1 || degLat > 90) {
-                dmsLatResult.textContent = "Degrees must be between 1 + 90";
+                dmsLatResult.textContent = "Degrees must be between 1 and 90";
             } else if (minLatNum < 1 || minLat > 59) {
                 dmsLatResult.textContent = "Minutes must be between 1 + 59";
             } else if (secLatNum < 1 || secLat > 59) {
@@ -126,7 +126,7 @@ convert = {
             } else if (secLonCheck === false) {
                 dmsLonResult.textContent = "Seconds must be numbers only";
             } else if (degLonNum < 1 || degLon > 180) {
-                dmsLonResult.textContent = "Degrees must be between 1 + 180";
+                dmsLonResult.textContent = "Degrees must be between 1 and 180";
             } else if (minLonNum < 1 || minLon > 59) {
                 dmsLonResult.textContent = "Minutes must be between 1 + 59";
             } else if (secLonNum < 1 || secLon > 59) {
@@ -197,7 +197,7 @@ convert = {
             if (deciLatCheck === false) {
                 ddLatResult.textContent = "Degrees must be numbers only";
             } else if (deciLatNum < 1 || deciLatNum > 90) {
-                ddLatResult.textContent = "Degrees must be between 1 + 90";
+                ddLatResult.textContent = "Degrees must be between 1 and 90";
             } else {
                 //Do the conversion.
                 const deciDeg = Math.floor(deciLatNum);
@@ -256,7 +256,7 @@ convert = {
             if (deciLonCheck === false) {
                 ddLonResult.textContent = "Degrees must be numbers only";
             } else if (deciLonNum < 1 || deciLonNum > 180) {
-                ddLonResult.textContent = "Degrees must be between 1 + 180";
+                ddLonResult.textContent = "Degrees must be between 1 and 180";
             } else {
                 //Do the conversion.
                 const deciDeg = Math.floor(deciLonNum);
