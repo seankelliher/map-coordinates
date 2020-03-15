@@ -39,7 +39,6 @@ convert = {
 
             //Retrieve the "pole" radio buttons.
             const dmsNorth = document.getElementById("dms-north").checked;
-            //const dmsSouth = document.getElementById("dms-south").checked;
 
             //Discover which one is checked.
             const dmsPole = (
@@ -106,7 +105,6 @@ convert = {
 
             //Retrieve the "gmt" radio buttons.
             const dmsEast = document.getElementById("dms-east").checked;
-            //const dmsWest = document.getElementById("dms-west").checked;
 
             //Discover which one is checked.
             const dmsGmt = (
@@ -181,7 +179,6 @@ convert = {
 
             //Retrieve the "pole" radio buttons.
             const ddNorth = document.getElementById("dd-north").checked;
-            //const ddSouth = document.getElementById("dd-south").checked;
 
             //Discover which one is checked.
             const ddPole = (
@@ -240,7 +237,6 @@ convert = {
 
             //Retrieve the "gmt" radio buttons.
             const ddEast = document.getElementById("dd-east").checked;
-            //const ddWest = document.getElementById("dd-west").checked;
 
             //Discover which one is checked.
             const ddGmt = (
