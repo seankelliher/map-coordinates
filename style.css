@@ -18,14 +18,10 @@ header {
 
 form {
     width: 95%;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 0 1em 0;
     padding: .5em 2.5%;
-    border-right: 1px solid #e0e0e0; /*grey 300*/
-    border-left: 1px solid #e0e0e0; /*grey 300*/
-    border-bottom: 1px solid #e0e0e0; /*grey 300*/
+    background: #F5F5F5; /*grey 100*/
     flex: initial; /*flex: 0 1 auto*/
-    /*margins-left + right, set by flexbox*/
 }
 
 form:last-of-type {
