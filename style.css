@@ -41,6 +41,31 @@ input {
     border: 2px solid #ECEFF1; /*blue grey 50*/
 }
 
+/*P class that houses "convert" and "sum" span classes*/
+.result {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: flex-start; /*cross axis*/
+}
+
+/*"Convert" text button*/
+.convert {
+    color: #007AC1; /*light blue 500 dark*/
+    flex: initial; /*flex: 0 1 auto*/
+}
+
+.convert:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*Converted coordinate is displayed here*/
+.sum {
+    color: #725B53; /*brown 300 dark*/
+    flex: initial; /*flex: 0 1 auto*/
+}
+
 footer {
     width: 95%;
     margin-top: 0;
