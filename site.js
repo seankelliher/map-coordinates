@@ -60,9 +60,9 @@ convert = {
             } else if (degLatNum < 1 || degLat > 90) {
                 dmsLatResult.textContent = "Degrees must be between 1 and 90";
             } else if (minLatNum < 1 || minLat > 59) {
-                dmsLatResult.textContent = "Minutes must be between 1 + 59";
+                dmsLatResult.textContent = "Minutes must be between 1 and 59";
             } else if (secLatNum < 1 || secLat > 59) {
-                dmsLatResult.textContent = "Seconds must be between 1 + 59";
+                dmsLatResult.textContent = "Seconds must be between 1 and 59";
             } else {
                 //Invoke function that does conversion math, pass parameters.
                 convert.dmsBothMath(
@@ -126,9 +126,9 @@ convert = {
             } else if (degLonNum < 1 || degLon > 180) {
                 dmsLonResult.textContent = "Degrees must be between 1 and 180";
             } else if (minLonNum < 1 || minLon > 59) {
-                dmsLonResult.textContent = "Minutes must be between 1 + 59";
+                dmsLonResult.textContent = "Minutes must be between 1 and 59";
             } else if (secLonNum < 1 || secLon > 59) {
-                dmsLonResult.textContent = "Seconds must be between 1 + 59";
+                dmsLonResult.textContent = "Seconds must be between 1 and 59";
             } else {
                 //Invoke function that does conversion math, pass parameters.
                 convert.dmsBothMath(
