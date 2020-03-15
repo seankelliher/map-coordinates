@@ -24,10 +24,6 @@ form {
     flex: initial; /*flex: 0 1 auto*/
 }
 
-form:last-of-type {
-    border-bottom: none;
-}
-
 fieldset {
     margin: .5em 0;
     padding: .5em 0;
