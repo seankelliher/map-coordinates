@@ -75,21 +75,49 @@ footer {
 }
 
 h1 {
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 h2 {
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
+    font-weight: 700;
+}
+
+p, label, input {
+    font-family: 'Roboto', serif;
+    line-height: 1.8;
     font-weight: 400;
 }
 
-p {
-    font-family: 'Merriweather', serif;
-    line-height: 1.8;
-    font-weight: 400;
+@media all and (min-width: 300px) {
+    p, label, input {
+        font-size: .9375em; /*15 pixels*/
+    }
+
+    h1 {
+        font-size: 1.4375em; /*23 pixels*/
+    }
+
+    h2 {
+        font-size: 1.0625em; /*17 pixels*/
+    }
+}
+
+@media all and (min-width: 600px) {
+    p, label, input {
+        font-size: 1em; /*16 pixels*/
+    }
+
+    h1 {
+        font-size: 1.5em; /*24 pixels*/
+    }
+
+    h2 {
+        font-size: 1.125em; /*18 pixels*/
+    }
 }
 
 /*Where "result" is displayed.*/
