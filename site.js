@@ -156,7 +156,7 @@ convert = {
         //Degree symbol, space.
         const degSymbol = String.fromCharCode(176, 32);
 
-        //Place the result.
+        //Place result.
         result.textContent = sum + degSymbol + poleGmt;
     },
 
@@ -207,7 +207,7 @@ convert = {
                 const minSum = deciMin + String.fromCharCode(39, 32);
                 const secSum = deciSec2 + String.fromCharCode(34, 32);
 
-                //Place the result.
+                //Place result.
                 ddLatResult.textContent = degSum + minSum + secSum + ddPole;
             }
 
@@ -265,7 +265,7 @@ convert = {
                 const minSum = deciMin + String.fromCharCode(39, 32);
                 const secSum = deciSec2 + String.fromCharCode(34, 32);
 
-                //Place the result.
+                //Place result.
                 ddLonResult.textContent = degSum + minSum + secSum + ddGmt;
             }
 
