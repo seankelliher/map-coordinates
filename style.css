@@ -42,9 +42,9 @@ header::after {
 }
 
 form {
-    width: 95%;
+    width: 90%;
     margin: 0 0 1em 0;
-    padding: .5em 2.5%;
+    padding: 1em 5%;
     background: #F5F5F5; /*grey 100*/
     flex: initial; /*flex: 0 1 auto*/
 }
@@ -92,9 +92,9 @@ input {
 }
 
 footer {
-    width: 95%;
-    margin: 0;
-    padding: 0 2.5%;
+    width: 90%;
+    margin: 0 0 1em 0;
+    padding: 1em 5%;
     background: #F5F5F5; /*grey 100*/
     flex: initial; /*flex: 0 1 auto*/
 }
