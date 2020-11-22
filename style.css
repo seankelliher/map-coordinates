@@ -81,7 +81,7 @@ input {
 
 /*"Convert" text button*/
 .convert {
-    color: #007AC1; /*light blue 500 dark*/
+    color: #F24405; /*orange*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
