@@ -61,6 +61,11 @@ button {
     border-left: 1px solid #EEE; /*grey 200*/
     border-bottom: none;
     background: #FAFAFA;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #EEE; /*grey 200*/
 }
 
 @media all and (min-width: 300px) {
@@ -76,7 +81,8 @@ button {
 }
 
 .selected {
-    background: green;
+    background: #41BF49; /*green*/
+
 }
 
 form {
@@ -114,7 +120,7 @@ input {
 
 /*"Convert" text button*/
 .convert {
-    color: #F24405; /*orange*/
+    color: #0378A6; /*blue*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -125,7 +131,7 @@ input {
 
 /*Converted coordinate is displayed here*/
 .sum {
-    color: #725B53; /*brown 300 dark*/
+    color: #03588C; /*blue*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
