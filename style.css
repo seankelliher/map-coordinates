@@ -48,9 +48,9 @@ header::after {
 
 form {
     width: 90%;
-    margin: 0 0 1em 0;
-    padding: 1em 5%;
-    background: #F5F5F5; /*grey 100*/
+    margin: 1em 0;
+    padding: 0 5%;
+    border-bottom: 1px solid #EEE; /*grey 200*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
