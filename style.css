@@ -76,9 +76,9 @@ button {
 }
 
 form {
-    width: 90%;
+    width: 85%;
     margin: 1em 0;
-    padding: 0 5%;
+    padding: 0 5% 0 10%;
     border-bottom: 1px solid #EEE; /*grey 200*/
     flex: initial; /*flex: 0 1 auto*/
 }
@@ -139,7 +139,7 @@ h1 {
     font-weight: 700;
 }
 
-h2 {
+h2, button {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-weight: 700;
@@ -160,7 +160,7 @@ p, label, input {
         font-size: 1.4375em; /*23 pixels*/
     }
 
-    h2 {
+    h2, button {
         font-size: 1.0625em; /*17 pixels*/
     }
 }
@@ -174,7 +174,7 @@ p, label, input {
         font-size: 1.5em; /*24 pixels*/
     }
 
-    h2 {
+    h2, button {
         font-size: 1.125em; /*18 pixels*/
     }
 }
