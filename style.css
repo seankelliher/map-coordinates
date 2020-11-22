@@ -75,6 +75,10 @@ button {
     }
 }
 
+.selected {
+    background: green;
+}
+
 form {
     width: 85%;
     margin: 1em 0;
@@ -128,8 +132,7 @@ input {
 footer {
     width: 90%;
     margin: 0 0 1em 0;
-    padding: 1em 5%;
-    background: #F5F5F5; /*grey 100*/
+    padding: 0 5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -149,6 +152,10 @@ p, label, input {
     font-family: 'Roboto', serif;
     line-height: 1.8;
     font-weight: 400;
+}
+
+footer p {
+    color: #757575; /*grey 600*/
 }
 
 @media all and (min-width: 300px) {
