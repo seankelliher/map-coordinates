@@ -5,10 +5,12 @@ let convert;
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    convert.dmsLatCheck();
-    convert.dmsLonCheck();
-    convert.ddLatCheck();
-    convert.ddLonCheck();
+    //Display the "DMS to DD" tab.
+    convert.dmsOriginShow();
+
+    //Monitor the tabs for clicks.
+    convert.monitorTabs();
+
 });
 
 //The convert variable (let).
@@ -274,6 +276,91 @@ convert = {
 
         });
 
+    },
+
+    //Show the DMS to DD form elements.
+    dmsOriginShow: function () {
+        "use strict";
+
+        //Gather form elements.
+        const forms = document.querySelectorAll("form");
+        const formsArray = Array.from(forms); //Works without converting too.
+
+        formsArray.forEach(function (form) {
+            if (form.className === "dms-origin") {
+
+                //Show selected forms.
+                form.style.display = "block";
+
+                //Activate event listeners on forms.
+                convert.dmsLatCheck();
+                convert.dmsLonCheck();
+
+                //Get clicked tab. Add class to highlight it.
+                const dmsOriginTab = document.getElementById("dms-origin");
+                dmsOriginTab.classList.add("selected");
+            } else if (form.className === "dd-origin") {
+
+                //Hide "not selected" forms.
+                form.style.display = "none";
+
+                //Get "not clicked" tab. Remove class that highlights it.
+                const ddOriginTab = document.getElementById("dd-origin");
+                ddOriginTab.classList.remove("selected");
+            }
+        });
+    },
+
+    //Show the DD to DMS form elements.
+    ddOriginShow: function () {
+        "use strict";
+
+        //Gather form elements.
+        const forms = document.querySelectorAll("form");
+        const formsArray = Array.from(forms); //Works without converting too.
+
+        //Show the selected forms. Hide the other.
+        formsArray.forEach(function (form) {
+            if (form.className === "dd-origin") {
+
+                //Show selected forms.
+                form.style.display = "block";
+
+                //Activate event listeners on forms.
+                convert.ddLatCheck();
+                convert.ddLonCheck();
+
+                //Get clicked tab. Add class to highlight it.
+                const ddOriginTab = document.getElementById("dd-origin");
+                ddOriginTab.classList.add("selected");
+            } else if (form.className === "dms-origin") {
+
+                //Hide "not selected" forms.
+                form.style.display = "none";
+
+                //Get "not clicked" tab. Remove class that highlights it.
+                const dmsOriginTab = document.getElementById("dms-origin");
+                dmsOriginTab.classList.remove("selected");
+            }
+        });
+    },
+
+    //Monitor the tabs for clicks.
+    monitorTabs: function () {
+        "use strict";
+
+        //Retrieve the nav (tabs are inside it).
+        const nav = document.querySelector("nav");
+
+        //Get the clicked tab's id.
+        //Invoke functions to show/hide those form elements.
+        nav.addEventListener("click", function (event) {
+            if (event.target.id === "dms-origin") {
+                convert.dmsOriginShow();
+            } else if (event.target.id === "dd-origin") {
+                convert.ddOriginShow();
+            }
+        });
     }
 
 }; //close convert
