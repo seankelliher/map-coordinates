@@ -26,11 +26,11 @@
             </header>
 
             <nav>
-                <button id="dms-origin">DMS to DD</button>
-                <button id="dd-origin">DD to DMS</button>
+                <button id="dms-to-dd">DMS to DD</button>
+                <button id="dd-to-dms">DD to DMS</button>
             </nav>
 
-            <form class="dms-origin">
+            <form class="dms-to-dd">
 
                 <fieldset>
 
@@ -66,7 +66,7 @@
 
             </form>
 
-            <form class="dms-origin">
+            <form class="dms-to-dd">
 
                 <fieldset>
 
@@ -102,12 +102,12 @@
 
             </form>
 
-            <form class="dd-origin">
+            <form class="dd-to-dms">
 
                 <fieldset>
 
                     <h2>Latitude</h2>
-
+   
                     <label for="deci-lat">
                         <input type="text" id="deci-lat" name="deci-lat" required minlength="5" maxlength="20" size="24">decimal deg
                     </label>
@@ -117,11 +117,11 @@
                 <fieldset>
 
                     <label for="dd-north">
-                        <input type="radio" id="dd-north" name="dd-pole" checked>North
+                        <input type="radio" id="dd-north" name="dd-pole" checked>Positive
                     </label>
 
                     <label for="dd-south">
-                        <input type="radio" id="dd-south" name="dd-pole">South
+                        <input type="radio" id="dd-south" name="dd-pole">Negative
                     </label>
 
                     <p class="result"><span class="sum" id="dd-lat-sum"></span> <span class="convert" id="dd-lat-btn">CONVERT</span></p>
@@ -130,7 +130,7 @@
 
             </form>
 
-            <form class="dd-origin">
+            <form class="dd-to-dms">
 
                 <fieldset>
 
@@ -145,11 +145,11 @@
                 <fieldset>
 
                     <label for="dd-east">
-                        <input type="radio" id="dd-east" name="dd-gmt" checked>East
+                        <input type="radio" id="dd-east" name="dd-gmt" checked>Positive
                     </label>
 
                     <label for="dd-west">
-                        <input type="radio" id="dd-west" name="dd-gmt">West
+                        <input type="radio" id="dd-west" name="dd-gmt">Negative
                     </label>
 
                     <p class="result"><span class="sum" id="dd-lon-sum"></span> <span class="convert" id="dd-lon-btn">CONVERT</span></p>
@@ -164,7 +164,7 @@
 
         </div> <!--close container-->
 
-        <script type="text/javascript" src="site.js"></script>
+        <script type="module" src="index.js"></script>
 
     </body>
 
