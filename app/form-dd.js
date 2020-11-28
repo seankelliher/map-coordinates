@@ -1,5 +1,10 @@
+import {
+    monitorBtnDdLat,
+    monitorBtnDdLon
+} from "./inputs.js";
+
 //Show the DD to DMS form elements.
-function showDdToDmsForm () {
+function showDdForm() {
     "use strict";
 
     //Gather form elements.
@@ -14,22 +19,22 @@ function showDdToDmsForm () {
             form.style.display = "block";
 
             //Activate event listeners on forms.
-            //ddLatCheck();
-            //ddLonCheck();
+            monitorBtnDdLat();
+            monitorBtnDdLon();
 
             //Get clicked tab. Add class to highlight it.
-            const ddOriginTab = document.getElementById("dd-to-dms");
-            ddOriginTab.classList.add("selected");
+            const ddTab = document.getElementById("dd-to-dms");
+            ddTab.classList.add("selected");
         } else if (form.className === "dms-to-dd") {
 
             //Hide "not selected" forms.
             form.style.display = "none";
 
             //Get "not clicked" tab. Remove class that highlights it.
-            const dmsOriginTab = document.getElementById("dms-to-dd");
-            dmsOriginTab.classList.remove("selected");
+            const dmsTab = document.getElementById("dms-to-dd");
+            dmsTab.classList.remove("selected");
         }
     });
 }
 
-export { showDdToDmsForm };
+export {showDdForm};
