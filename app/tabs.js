@@ -1,6 +1,5 @@
-import { showDmsToDdForm } from "./dms-to-dd-form.js";
-import { showDdToDmsForm } from "./dd-to-dms-form.js";
-
+import { showDmsForm } from "./form-dms.js";
+import { showDdForm } from "./form-dd.js";
 
 //Monitor the tabs for clicks.
 function monitorTabs () {
@@ -13,9 +12,9 @@ function monitorTabs () {
     //Invoke functions to show/hide those form elements.
     nav.addEventListener("click", function (event) {
         if (event.target.id === "dms-to-dd") {
-            showDmsToDdForm();
+            showDmsForm();
         } else if (event.target.id === "dd-to-dms") {
-            showDdToDmsForm();
+            showDdForm();
         }
     });
 }
