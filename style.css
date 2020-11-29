@@ -160,7 +160,7 @@ p, label, input {
     font-weight: 400;
 }
 
-footer p {
+.grey {
     color: #757575; /*grey 600*/
 }
 
