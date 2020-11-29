@@ -1,7 +1,7 @@
 import {
     monitorBtnDmsLat,
     monitorBtnDmsLon
-} from "./inputs.js";
+} from "./inputs-dms.js";
 
 //Show the DMS to DD form elements.
 function showDmsForm() {
