@@ -7,8 +7,8 @@ function integrityCheckDmsLat(deg, min, sec) {
     const secCheck = /^\d{1,2}$/.test(sec);
 
     const degNum = Number(deg);
-    const degMin = Number(min);
-    const degSec = Number(sec);
+    const minNum = Number(min);
+    const secNum = Number(sec);
 
     if (deg === "") {
         return "You are missing the degrees!";
@@ -31,19 +31,21 @@ function integrityCheckDmsLat(deg, min, sec) {
     if (degNum > 90) {
         return "Degrees must be 0 - 90!";
     }
-    if (degMin > 59) {
+    if (minNum > 59) {
         return "Minutes must be 0 - 59!";
     }
-    if (degSec > 59) {
+    if (secNum > 59) {
         return "Seconds must be 0 - 59!";
     }
     if (degNum === 90) {
-        if (degMin > 0) {
+        if (minNum > 0) {
             return "If 90 degs, mins and secs must be 0.";
         }
-        if (degSec > 0) {
+        if (secNum > 0) {
             return "If 90 degs, mins and secs must be 0.";
         }
+    } else {
+        return false;
     }
 }
 
@@ -56,8 +58,8 @@ function integrityCheckDmsLon(deg, min, sec) {
     const secCheck = /^\d{1,2}$/.test(sec);
 
     const degNum = Number(deg);
-    const degMin = Number(min);
-    const degSec = Number(sec);
+    const minNum = Number(min);
+    const secNum = Number(sec);
 
     if (deg === "") {
         return "You are missing the degrees!";
@@ -80,19 +82,21 @@ function integrityCheckDmsLon(deg, min, sec) {
     if (degNum > 180) {
         return "Degrees must be 0 - 180!";
     }
-    if (degMin > 59) {
+    if (minNum > 59) {
         return "Minutes must be 0 - 59!";
     }
-    if (degSec > 59) {
+    if (secNum > 59) {
         return "Seconds must be 0 - 59!";
     }
     if (degNum === 180) {
-        if (degMin > 0) {
+        if (minNum > 0) {
             return "If 180 degs, mins and secs must be 0.";
         }
-        if (degSec > 0) {
+        if (secNum > 0) {
             return "If 180 degs, mins and secs must be 0.";
         }
+    } else {
+        return false;
     }
 }
 
