@@ -1,7 +1,5 @@
-import {
-    integrityCheckDmsLat,
-    integrityCheckDmsLon
-} from "./integrity-dms.js";
+import {integrityCheckDmsLat, integrityCheckDmsLon} from "./integrity-dms.js";
+import {doTheMathDmsLat, doTheMathDmsLon} from "./math-dms.js";
 
 function monitorBtnDmsLat() {
     "use strict";
@@ -15,8 +13,13 @@ function monitorBtnDmsLat() {
         const secLat = document.getElementById("sec-lat").value;
 
         const dmsLatSum = document.getElementById("dms-lat-sum");
+        const integrityError = integrityCheckDmsLat(degLat, minLat, secLat);
 
-        dmsLatSum.textContent = integrityCheckDmsLat(degLat, minLat, secLat);
+        if (integrityError === false) {
+            dmsLatSum.textContent = doTheMathDmsLat(degLat, minLat, secLat);
+        } else {
+            dmsLatSum.textContent = integrityError;
+        }
 
     });
 }
@@ -33,8 +36,13 @@ function monitorBtnDmsLon() {
         const secLon = document.getElementById("sec-lon").value;
 
         const dmsLonSum = document.getElementById("dms-lon-sum");
+        const integrityError = integrityCheckDmsLon(degLon, minLon, secLon);
 
-        dmsLonSum.textContent = integrityCheckDmsLon(degLon, minLon, secLon);
+        if (integrityError === false) {
+            dmsLonSum.textContent = doTheMathDmsLon(degLon, minLon, secLon);
+        } else {
+            dmsLonSum.textContent = integrityError;
+        }
 
     });
 }
