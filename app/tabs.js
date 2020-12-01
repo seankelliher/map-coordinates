@@ -1,8 +1,8 @@
-import { showDmsForm } from "./form-dms.js";
-import { showDdForm } from "./form-dd.js";
+import {showDmsForm} from "./form-dms.js";
+import {showDdForm} from "./form-dd.js";
 
 //Monitor the tabs for clicks.
-function monitorTabs () {
+function monitorTabs() {
     "use strict";
 
     //Retrieve the nav (tabs are inside it).
@@ -19,4 +19,4 @@ function monitorTabs () {
     });
 }
 
-export { monitorTabs };
+export {monitorTabs};
