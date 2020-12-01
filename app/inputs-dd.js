@@ -1,6 +1,8 @@
 import {integrityCheckDdLat, integrityCheckDdLon} from "./integrity-dd.js";
 import {doTheMathDd} from "./math-dd.js";
 
+//Get input from DD to DMS form - Latitude.
+//Send to other functions to check integrity, do conversion.
 function monitorBtnDdLat() {
     "use strict";
 
@@ -19,10 +21,11 @@ function monitorBtnDdLat() {
         } else {
             ddLatSum.textContent = integrityError;
         }
-
     });
 }
 
+//Get input from DD to DMS form - Longitude.
+//Send to other functions to check integrity, do conversion.
 function monitorBtnDdLon() {
     "use strict";
 
@@ -41,13 +44,7 @@ function monitorBtnDdLon() {
         } else {
             ddLonSum.textContent = integrityError;
         }
-
     });
 }
 
-export {
-    monitorBtnDdLat,
-    monitorBtnDdLon
-};
-
-//Check modules and use strict. I don't think its necessary.
+export {monitorBtnDdLat, monitorBtnDdLon};
