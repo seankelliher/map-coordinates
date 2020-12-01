@@ -2,8 +2,8 @@
 function integrityCheckDdLat(deci) {
     "use strict";
 
-    //Optional -/+ symbol. Then 1-2 digits + decimal + 1-8 digits.
-    const deciCheck = /^[-,+]?\d{1,2}\.\d{1,8}$/.test(deci);
+    //Optional -/+ symbol. Then 1-2 digits + decimal + 1-5 digits.
+    const deciCheck = /^[-,+]?\d{1,2}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
 
@@ -15,6 +15,8 @@ function integrityCheckDdLat(deci) {
     }
     if (deciNum > 90) {
         return "Degrees must be 0 - 90!";
+    } else {
+        return false;
     }
 }
 
@@ -22,8 +24,8 @@ function integrityCheckDdLat(deci) {
 function integrityCheckDdLon(deci) {
     "use strict";
 
-    //Optional -/+ symbol. Then 1-3 digits + decimal + 1-8 digits.
-    const deciCheck = /^[-,+]?\d{1,3}\.\d{1,8}$/.test(deci);
+    //Optional -/+ symbol. Then 1-3 digits + decimal + 1-5 digits.
+    const deciCheck = /^[-,+]?\d{1,3}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
 
@@ -35,7 +37,8 @@ function integrityCheckDdLon(deci) {
     }
     if (deciNum > 180) {
         return "Degrees must be 0 - 180!";
+    } else {
+        return false;
     }
 }
-
 export {integrityCheckDdLat, integrityCheckDdLon};
