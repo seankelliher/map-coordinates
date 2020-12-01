@@ -8,16 +8,16 @@ function monitorBtnDmsLat() {
 
     dmsLatButton.addEventListener("click", function () {
 
-        const degLat = document.getElementById("deg-lat").value;
-        const minLat = document.getElementById("min-lat").value;
-        const secLat = document.getElementById("sec-lat").value;
+        const deg = document.getElementById("deg-lat").value;
+        const min = document.getElementById("min-lat").value;
+        const sec = document.getElementById("sec-lat").value;
 
         const dmsLatSum = document.getElementById("dms-lat-sum");
-        const integrityError = integrityCheckDmsLat(degLat, minLat, secLat);
+        const integrityError = integrityCheckDmsLat(deg, min, sec);
         const lines = "parallels";
 
         if (integrityError === false) {
-            dmsLatSum.textContent = doTheMathDms(degLat, minLat, secLat, lines);
+            dmsLatSum.textContent = doTheMathDms(deg, min, sec, lines);
         } else {
             dmsLatSum.textContent = integrityError;
         }
@@ -32,16 +32,16 @@ function monitorBtnDmsLon() {
 
     dmsLonButton.addEventListener("click", function () {
 
-        const degLon = document.getElementById("deg-lon").value;
-        const minLon = document.getElementById("min-lon").value;
-        const secLon = document.getElementById("sec-lon").value;
+        const deg = document.getElementById("deg-lon").value;
+        const min = document.getElementById("min-lon").value;
+        const sec = document.getElementById("sec-lon").value;
 
         const dmsLonSum = document.getElementById("dms-lon-sum");
-        const integrityError = integrityCheckDmsLon(degLon, minLon, secLon);
+        const integrityError = integrityCheckDmsLon(deg, min, sec);
         const lines = "meridians";
 
         if (integrityError === false) {
-            dmsLonSum.textContent = doTheMathDms(degLon, minLon, secLon, lines);
+            dmsLonSum.textContent = doTheMathDms(deg, min, sec, lines);
         } else {
             dmsLonSum.textContent = integrityError;
         }
