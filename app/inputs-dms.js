@@ -1,5 +1,5 @@
 import {integrityCheckDmsLat, integrityCheckDmsLon} from "./integrity-dms.js";
-import {doTheMathDmsLat, doTheMathDmsLon} from "./math-dms.js";
+import {doTheMathDms} from "./math-dms.js";
 
 function monitorBtnDmsLat() {
     "use strict";
@@ -14,9 +14,10 @@ function monitorBtnDmsLat() {
 
         const dmsLatSum = document.getElementById("dms-lat-sum");
         const integrityError = integrityCheckDmsLat(degLat, minLat, secLat);
+        const lines = "parallels";
 
         if (integrityError === false) {
-            dmsLatSum.textContent = doTheMathDmsLat(degLat, minLat, secLat);
+            dmsLatSum.textContent = doTheMathDms(degLat, minLat, secLat, lines);
         } else {
             dmsLatSum.textContent = integrityError;
         }
@@ -37,9 +38,10 @@ function monitorBtnDmsLon() {
 
         const dmsLonSum = document.getElementById("dms-lon-sum");
         const integrityError = integrityCheckDmsLon(degLon, minLon, secLon);
+        const lines = "meridians";
 
         if (integrityError === false) {
-            dmsLonSum.textContent = doTheMathDmsLon(degLon, minLon, secLon);
+            dmsLonSum.textContent = doTheMathDms(degLon, minLon, secLon, lines);
         } else {
             dmsLonSum.textContent = integrityError;
         }
@@ -47,9 +49,6 @@ function monitorBtnDmsLon() {
     });
 }
 
-export {
-    monitorBtnDmsLat,
-    monitorBtnDmsLon,
-};
+export {monitorBtnDmsLat, monitorBtnDmsLon};
 
 //Check modules and use strict. I don't think its necessary.
