@@ -8,14 +8,14 @@ function monitorBtnDdLat() {
 
     ddLatButton.addEventListener("click", function () {
         
-        const deciLat = document.getElementById("deci-lat").value;
+        const deci = document.getElementById("deci-lat").value;
 
         const ddLatSum = document.getElementById("dd-lat-sum");
-        const integrityError = integrityCheckDdLat(deciLat);
+        const integrityError = integrityCheckDdLat(deci);
         const lines = "parallels";
 
         if (integrityError === false) {
-            ddLatSum.textContent = doTheMathDd(deciLat, lines);
+            ddLatSum.textContent = doTheMathDd(deci, lines);
         } else {
             ddLatSum.textContent = integrityError;
         }
@@ -30,14 +30,14 @@ function monitorBtnDdLon() {
 
     ddLonButton.addEventListener("click", function () {
         
-        const deciLon = document.getElementById("deci-lon").value;
+        const deci = document.getElementById("deci-lon").value;
 
         const ddLonSum = document.getElementById("dd-lon-sum");
-        const integrityError = integrityCheckDdLon(deciLon);
+        const integrityError = integrityCheckDdLon(deci);
         const lines = "meridians";
 
         if (integrityError === false) {
-            ddLonSum.textContent = doTheMathDd(deciLon, lines);
+            ddLonSum.textContent = doTheMathDd(deci, lines);
         } else {
             ddLonSum.textContent = integrityError;
         }
