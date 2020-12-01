@@ -9,7 +9,7 @@ function doTheMathDms(deg, min, sec, lines) {
     //Do the math.
     const sum = degNum + (minNum / 60) + (secNum / 3600);
 
-    let sumAbsolute
+    let sumAbsolute;
 
     //Check "lines" argument received above to know if
     //we are calculating latitude or longitude.
