@@ -9,7 +9,7 @@ function monitorBtnDdLat() {
     const ddLatButton = document.getElementById("dd-lat-btn");
 
     ddLatButton.addEventListener("click", function () {
-        
+
         const deci = document.getElementById("deci-lat").value;
 
         const ddLatSum = document.getElementById("dd-lat-sum");
@@ -32,7 +32,7 @@ function monitorBtnDdLon() {
     const ddLonButton = document.getElementById("dd-lon-btn");
 
     ddLonButton.addEventListener("click", function () {
-        
+
         const deci = document.getElementById("deci-lon").value;
 
         const ddLonSum = document.getElementById("dd-lon-sum");
