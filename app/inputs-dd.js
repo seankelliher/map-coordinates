@@ -1,7 +1,5 @@
-import {
-    integrityCheckDdLat,
-    integrityCheckDdLon
-} from "./integrity-dd.js";
+import {integrityCheckDdLat, integrityCheckDdLon} from "./integrity-dd.js";
+import {doTheMathDdLat, doTheMathDdLon} from "./math-dd.js";
 
 function monitorBtnDdLat() {
     "use strict";
@@ -13,8 +11,13 @@ function monitorBtnDdLat() {
         const deciLat = document.getElementById("deci-lat").value;
 
         const ddLatSum = document.getElementById("dd-lat-sum");
+        const integrityError = integrityCheckDdLat(deciLat);
 
-        ddLatSum.textContent = integrityCheckDdLat(deciLat);
+        if (integrityError === false) {
+            ddLatSum.textContent = doTheMathDdLat(deciLat);
+        } else {
+            ddLatSum.textContent = integrityError;
+        }
 
     });
 }
@@ -29,9 +32,14 @@ function monitorBtnDdLon() {
         const deciLon = document.getElementById("deci-lon").value;
 
         const ddLonSum = document.getElementById("dd-lon-sum");
+        const integrityError = integrityCheckDdLon(deciLon);
 
-        ddLonSum.textContent = integrityCheckDdLon(deciLon);
-        
+        if (integrityError === false) {
+            ddLonSum.textContent = doTheMathDdLon(deciLon);
+        } else {
+            ddLonSum.textContent = integrityError;
+        }
+
     });
 }
 
