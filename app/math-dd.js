@@ -37,7 +37,7 @@ function doTheMathDd(deci, lines) {
             deciNum > 0
             ? "East"
             : "West"
-            );
+        );
     }
 
     return `${degs}° ${mins}' ${secs.toFixed(2)}" ${hemisphere}`;
