@@ -101,3 +101,6 @@ function integrityCheckDmsLon(deg, min, sec) {
 }
 
 export {integrityCheckDmsLat, integrityCheckDmsLon};
+
+//NOTE: You could combine these two functions into one, but you end up with
+//a number of nested, hard to read "if" statements.
