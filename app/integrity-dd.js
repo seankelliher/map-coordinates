@@ -11,7 +11,7 @@ function integrityCheckDdLat(deci) {
         return "Please add a number!";
     }
     if (deciCheck === false) {
-        return "Use 1-2 digits + decimal + 1-8 digits.";
+        return "Use 1-2 digits + decimal + 1-5 digits.";
     }
     if (deciNum > 90) {
         return "Degrees must be 0 - 90!";
@@ -33,7 +33,7 @@ function integrityCheckDdLon(deci) {
         return "Please add a number!";
     }
     if (deciCheck === false) {
-        return "Use 1-3 digits + decimal + 1-8 digits.";
+        return "Use 1-3 digits + decimal + 1-5 digits.";
     }
     if (deciNum > 180) {
         return "Degrees must be 0 - 180!";
@@ -41,4 +41,8 @@ function integrityCheckDdLon(deci) {
         return false;
     }
 }
+
 export {integrityCheckDdLat, integrityCheckDdLon};
+
+//NOTE: You could combine these two functions into one, but you end up with
+//a number of nested, hard to read "if" statements.
