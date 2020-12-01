@@ -1,5 +1,5 @@
 import {integrityCheckDdLat, integrityCheckDdLon} from "./integrity-dd.js";
-import {doTheMathDdLat, doTheMathDdLon} from "./math-dd.js";
+import {doTheMathDd} from "./math-dd.js";
 
 function monitorBtnDdLat() {
     "use strict";
@@ -12,9 +12,10 @@ function monitorBtnDdLat() {
 
         const ddLatSum = document.getElementById("dd-lat-sum");
         const integrityError = integrityCheckDdLat(deciLat);
+        const lines = "parallels";
 
         if (integrityError === false) {
-            ddLatSum.textContent = doTheMathDdLat(deciLat);
+            ddLatSum.textContent = doTheMathDd(deciLat, lines);
         } else {
             ddLatSum.textContent = integrityError;
         }
@@ -33,9 +34,10 @@ function monitorBtnDdLon() {
 
         const ddLonSum = document.getElementById("dd-lon-sum");
         const integrityError = integrityCheckDdLon(deciLon);
+        const lines = "meridians";
 
         if (integrityError === false) {
-            ddLonSum.textContent = doTheMathDdLon(deciLon);
+            ddLonSum.textContent = doTheMathDd(deciLon, lines);
         } else {
             ddLonSum.textContent = integrityError;
         }
