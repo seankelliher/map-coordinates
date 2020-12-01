@@ -3,7 +3,7 @@ function integrityCheckDdLat(deci) {
     "use strict";
 
     //Optional -/+ symbol. Then 1-2 digits + decimal + 1-5 digits.
-    const deciCheck = /^[-,+]?\d{1,2}\.\d{1,5}$/.test(deci);
+    const deciCheck = /^[\-,+]?\d{1,2}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
 
@@ -25,7 +25,7 @@ function integrityCheckDdLon(deci) {
     "use strict";
 
     //Optional -/+ symbol. Then 1-3 digits + decimal + 1-5 digits.
-    const deciCheck = /^[-,+]?\d{1,3}\.\d{1,5}$/.test(deci);
+    const deciCheck = /^[\-,+]?\d{1,3}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
 
