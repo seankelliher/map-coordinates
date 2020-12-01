@@ -1,4 +1,4 @@
-//Math to convert DMS to DD - Latitude.
+//Math to convert DMS to DD - Latitude and Longitude.
 function doTheMathDms(deg, min, sec, lines) {
     "use strict";
 
@@ -11,16 +11,13 @@ function doTheMathDms(deg, min, sec, lines) {
 
     let sumAbsolute
 
-
-    //Check the "lines" argument, received above to know if
+    //Check "lines" argument received above to know if
     //we are calculating latitude or longitude.
-    //Check if number is negative or positive to determine hemisphere.
+    //Check checkboxes. Make sum positive or negative accordingly.
     if (lines === "parallels") {
-        //Retrieve the North "parallels" radio button.
         const dmsNorth = document.getElementById("dms-north");
 
-        //North checked = make sum positive.
-        //South checked = make sum negative.
+        //North checked = make sum positive, South checked = make sum negative.
         sumAbsolute = (
             dmsNorth.checked === true
             ? Math.abs(sum)
@@ -29,10 +26,9 @@ function doTheMathDms(deg, min, sec, lines) {
     }
 
     if (lines === "meridians") {
-        //Retrieve the East "meridians" radio button.
         const dmsEast = document.getElementById("dms-east");
-        //East checked = make sum positive.
-        //West checked = make sum negative.
+
+        //East checked = make sum positive, West checked = make sum negative.
         sumAbsolute = (
             dmsEast.checked === true
             ? Math.abs(sum)
