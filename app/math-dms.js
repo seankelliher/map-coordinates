@@ -39,7 +39,7 @@ function doTheMathDms(deg, min, sec, lines) {
     //Limit sum to 5 places left of decimal.
     const fixedFive = sumAbsolute.toFixed(5);
 
-    return `${fixedFive} °`;
+    return `${fixedFive} degrees`;
 }
 
 export {doTheMathDms};
