@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-    background: #EEE; /*grey 200*/
+    text-decoration: none;
 }
 
 @media all and (min-width: 300px) {
@@ -81,8 +81,8 @@ button:hover {
 }
 
 .selected {
-    background: #41BF49; /*green*/
-
+    color: #FFF;
+    background: #001F99; /*dark magenta*/
 }
 
 form {
@@ -153,9 +153,22 @@ input:focus::placeholder {
     align-items: flex-start; /*cross axis*/
 }
 
+/*"Clear" text button*/
+.clear {
+    color: #001F99; /*dark magenta*/
+    flex: initial; /*flex: 0 1 auto*/
+    margin-left: auto;
+    margin-right: 2.5em;
+}
+
+.clear:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*"Convert" text button*/
 .convert {
-    color: #0378A6; /*blue*/
+    color: #001F99; /*dark magenta*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
