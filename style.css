@@ -110,6 +110,41 @@ input {
     border: 2px solid #ECEFF1; /*blue grey 50*/
 }
 
+/*Makes placeholder grey and italicized*/
+input::placeholder {
+   color: #BDBDBD;
+   font-style: italic;
+}
+
+/*Placeholder prefix for Chrome, Opera, Safari*/
+input::-webkit-input-placeholder {
+   color: #BDBDBD;
+   font-style: italic;
+}
+
+/*Placeholder prefix for Firefox 19+*/
+input::-moz-placeholder {  
+   color: #BDBDBD;
+   font-style: italic;
+}
+
+/*Placeholder prefix for Firefox 18-*/
+input:-moz-placeholder {
+   color: #BDBDBD;
+   font-style: italic;
+}
+
+/*Placeholder prefix for IE 10+*/
+input:-ms-input-placeholder {  
+   color: #BDBDBD;
+   font-style: italic; 
+}
+
+/*Hides placeholder text field clicked on*/
+input:focus::placeholder {
+    opacity: 0;
+}
+
 /*P class that houses "convert" and "sum" span classes*/
 .result {
     display: flex;
