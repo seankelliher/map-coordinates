@@ -40,7 +40,7 @@ function doTheMathDd(deci, lines) {
         );
     }
 
-    return `${degs}° ${mins}' ${secs.toFixed(2)}" ${hemisphere}`;
+    return `${degs} degrees, ${mins} minutes, ${Math.floor(secs)} seconds ${hemisphere}`;
 }
 
 export {doTheMathDd};
