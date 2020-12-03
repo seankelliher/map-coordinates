@@ -145,20 +145,61 @@ input:focus::placeholder {
     opacity: 0;
 }
 
-/*P class that houses "convert" and "sum" span classes*/
-.result {
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /*main axis*/
+    justify-content: flex-start; /*main axis*/
     align-items: flex-start; /*cross axis*/
 }
 
-/*"Clear" text button*/
+/*div within section*/
+.result {
+    margin: 1em 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+}
+
+/*div within section*/
+.action {
+    margin: 1em 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    text-align: right;
+}
+
+@media all and (min-width: 300px) {
+    .result {
+        width: 100%;
+        min-height: 1.6875em; /*need this. div empty before result*/
+    }
+
+    .action {
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .result {
+        width: 60%;
+        min-height: 1.8em;
+    }
+    
+    .action {
+        width: 40%;
+    }
+}
+
+/*spans*/
+.sum {
+    color: #BF7256; /*brown*/
+}
+
 .clear {
     color: #001F99; /*dark magenta*/
-    flex: initial; /*flex: 0 1 auto*/
-    margin-left: auto;
-    margin-right: 2.5em;
+    cursor: pointer;
 }
 
 .clear:hover {
@@ -166,21 +207,15 @@ input:focus::placeholder {
     text-decoration: underline;
 }
 
-/*"Convert" text button*/
 .convert {
     color: #001F99; /*dark magenta*/
-    flex: initial; /*flex: 0 1 auto*/
+    cursor: pointer;
+    margin-left: 1.5em;
 }
 
 .convert:hover {
     cursor: pointer;
     text-decoration: underline;
-}
-
-/*Converted coordinate is displayed here*/
-.sum {
-    color: #BF7256; /*brown*/
-    flex: initial; /*flex: 0 1 auto*/
 }
 
 footer {
@@ -202,7 +237,7 @@ h2, button {
     font-weight: 700;
 }
 
-p, label, input {
+p, label, input, span {
     font-family: 'Roboto', serif;
     line-height: 1.8;
     font-weight: 400;
@@ -213,7 +248,7 @@ p, label, input {
 }
 
 @media all and (min-width: 300px) {
-    p, label, input {
+    p, label, input, span {
         font-size: .9375em; /*15 pixels*/
     }
 
@@ -227,7 +262,7 @@ p, label, input {
 }
 
 @media all and (min-width: 600px) {
-    p, label, input {
+    p, label, input, span {
         font-size: 1em; /*16 pixels*/
     }
 
