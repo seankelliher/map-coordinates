@@ -3,15 +3,16 @@ function integrityCheckDdLat(deci) {
     "use strict";
 
     //Optional -/+ symbol. Then 1-2 digits + decimal + 1-5 digits.
-    const deciCheck = /^[\-,+]?\d{1,2}\.\d{1,5}$/.test(deci);
+    const deciCheck = /^[\-,+]\d{1,2}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
+    const plusMinus = String.fromCharCode(177);
 
     if (deci === "") {
         return "Please add a number!";
     }
     if (deciCheck === false) {
-        return "Use 1-2 digits + decimal + 1-5 digits.";
+        return `Use format ${plusMinus} (1 - 2 digits) . (1 - 5 digits)`;
     }
     if (deciNum > 90) {
         return "Degrees must be 0 - 90!";
@@ -25,15 +26,16 @@ function integrityCheckDdLon(deci) {
     "use strict";
 
     //Optional -/+ symbol. Then 1-3 digits + decimal + 1-5 digits.
-    const deciCheck = /^[\-,+]?\d{1,3}\.\d{1,5}$/.test(deci);
+    const deciCheck = /^[\-,+]\d{1,3}\.\d{1,5}$/.test(deci);
 
     const deciNum = Number(deci);
+    const plusMinus = String.fromCharCode(177);
 
     if (deci === "") {
         return "Please add a number!";
     }
     if (deciCheck === false) {
-        return "Use 1-3 digits + decimal + 1-5 digits.";
+        return `Use format ${plusMinus} (1 - 3 digits) . (1 - 5 digits)`;
     }
     if (deciNum > 180) {
         return "Degrees must be 0 - 180!";
