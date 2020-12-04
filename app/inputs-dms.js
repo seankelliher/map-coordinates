@@ -6,7 +6,7 @@ import {doTheMathDms} from "./math-dms.js";
 function monitorBtnDmsLat() {
     "use strict";
 
-    const dmsLatButton = document.getElementById("dms-lat-btn");
+    const dmsLatButton = document.getElementById("dms-lat-convert");
 
     dmsLatButton.addEventListener("click", function () {
 
@@ -31,7 +31,7 @@ function monitorBtnDmsLat() {
 function monitorBtnDmsLon() {
     "use strict";
 
-    const dmsLonButton = document.getElementById("dms-lon-btn");
+    const dmsLonButton = document.getElementById("dms-lon-convert");
 
     dmsLonButton.addEventListener("click", function () {
 
