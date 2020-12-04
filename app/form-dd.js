@@ -1,4 +1,5 @@
 import {monitorDdLatConvert, monitorDdLonConvert} from "./inputs-dd.js";
+import{monitorDdLatClear, monitorDdLonClear} from "./clear.js";
 
 //Show the DD to DMS form elements.
 function showDdForm() {
@@ -14,6 +15,10 @@ function showDdForm() {
 
             //Show the DD to DMS form.
             form.style.display = "block";
+
+            //Activate event listeners on form's "clear" buttons.
+            monitorDdLatClear();
+            monitorDdLonClear();
 
             //Activate event listeners on form's "convert" buttons.
             monitorDdLatConvert();
