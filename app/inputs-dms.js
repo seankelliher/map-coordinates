@@ -3,7 +3,7 @@ import {doTheMathDms} from "./math-dms.js";
 
 //Get input from DMS to DD form - Latitude.
 //Send to other functions to check integrity, do conversion.
-function monitorBtnDmsLat() {
+function monitorDmsLatConvert() {
     "use strict";
 
     const dmsLatConvert = document.getElementById("dms-lat-convert");
@@ -28,7 +28,7 @@ function monitorBtnDmsLat() {
 
 //Get input from DMS to DD form - Longitude.
 //Send to other functions to check integrity, do conversion.
-function monitorBtnDmsLon() {
+function monitorDmsLonConvert() {
     "use strict";
 
     const dmsLonConvert = document.getElementById("dms-lon-convert");
@@ -51,4 +51,4 @@ function monitorBtnDmsLon() {
     });
 }
 
-export {monitorBtnDmsLat, monitorBtnDmsLon};
+export {monitorDmsLatConvert, monitorDmsLonConvert};
