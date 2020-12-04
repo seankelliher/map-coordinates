@@ -1,4 +1,4 @@
-import {monitorBtnDdLat, monitorBtnDdLon} from "./inputs-dd.js";
+import {monitorDdLatConvert, monitorDdLonConvert} from "./inputs-dd.js";
 
 //Show the DD to DMS form elements.
 function showDdForm() {
@@ -16,8 +16,8 @@ function showDdForm() {
             form.style.display = "block";
 
             //Activate event listeners on form's "convert" buttons.
-            monitorBtnDdLat();
-            monitorBtnDdLon();
+            monitorDdLatConvert();
+            monitorDdLonConvert();
 
             //Get DD to DMS tab. Add class to highlight it.
             const ddTab = document.getElementById("dd-to-dms");
