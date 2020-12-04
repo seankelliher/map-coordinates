@@ -6,9 +6,9 @@ import {doTheMathDms} from "./math-dms.js";
 function monitorBtnDmsLat() {
     "use strict";
 
-    const dmsLatButton = document.getElementById("dms-lat-convert");
+    const dmsLatConvert = document.getElementById("dms-lat-convert");
 
-    dmsLatButton.addEventListener("click", function () {
+    dmsLatConvert.addEventListener("click", function () {
 
         const deg = document.getElementById("deg-lat").value;
         const min = document.getElementById("min-lat").value;
@@ -31,9 +31,9 @@ function monitorBtnDmsLat() {
 function monitorBtnDmsLon() {
     "use strict";
 
-    const dmsLonButton = document.getElementById("dms-lon-convert");
+    const dmsLonConvert = document.getElementById("dms-lon-convert");
 
-    dmsLonButton.addEventListener("click", function () {
+    dmsLonConvert.addEventListener("click", function () {
 
         const deg = document.getElementById("deg-lon").value;
         const min = document.getElementById("min-lon").value;
