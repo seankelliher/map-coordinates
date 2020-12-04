@@ -6,7 +6,7 @@ import {doTheMathDd} from "./math-dd.js";
 function monitorBtnDdLat() {
     "use strict";
 
-    const ddLatButton = document.getElementById("dd-lat-btn");
+    const ddLatButton = document.getElementById("dd-lat-convert");
 
     ddLatButton.addEventListener("click", function () {
 
@@ -29,7 +29,7 @@ function monitorBtnDdLat() {
 function monitorBtnDdLon() {
     "use strict";
 
-    const ddLonButton = document.getElementById("dd-lon-btn");
+    const ddLonButton = document.getElementById("dd-lon-convert");
 
     ddLonButton.addEventListener("click", function () {
 
