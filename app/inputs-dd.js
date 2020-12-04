@@ -6,9 +6,9 @@ import {doTheMathDd} from "./math-dd.js";
 function monitorBtnDdLat() {
     "use strict";
 
-    const ddLatButton = document.getElementById("dd-lat-convert");
+    const ddLatConvert = document.getElementById("dd-lat-convert");
 
-    ddLatButton.addEventListener("click", function () {
+    ddLatConvert.addEventListener("click", function () {
 
         const deci = document.getElementById("deci-lat").value;
 
@@ -29,9 +29,9 @@ function monitorBtnDdLat() {
 function monitorBtnDdLon() {
     "use strict";
 
-    const ddLonButton = document.getElementById("dd-lon-convert");
+    const ddLonConvert = document.getElementById("dd-lon-convert");
 
-    ddLonButton.addEventListener("click", function () {
+    ddLonConvert.addEventListener("click", function () {
 
         const deci = document.getElementById("deci-lon").value;
 
