@@ -1,6 +1,5 @@
 import {showDmsForm} from "./app/form-dms.js";
 import {monitorTabs} from "./app/tabs.js";
-import{clearInputs} from "./app/clear.js";
 
 //Monitor page, after it loads invoke function.
 document.addEventListener("DOMContentLoaded", function () {
