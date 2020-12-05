@@ -1,8 +1,14 @@
 import {integrityCheckDdLat, integrityCheckDdLon} from "./integrity-dd.js";
 import {doTheMathDd} from "./math-dd.js";
 
-//Get input from DD to DMS form - Latitude.
-//Send to other functions to check integrity, do conversion.
+//Below functions are same, but for different forms.
+//Get the "convert" button, add event listener. When user clicks...
+//Gather form's input values, send to "integrity" module.
+//Integrity module returns either appropiate error message or "false".
+//If return "false", then send input values to "math" module.
+//Math module converts input value and returns result.
+
+//DD to DMS form - Latitude.
 function monitorDdLatConvert() {
     "use strict";
 
@@ -24,8 +30,7 @@ function monitorDdLatConvert() {
     });
 }
 
-//Get input from DD to DMS form - Longitude.
-//Send to other functions to check integrity, do conversion.
+//DD to DMS form - Longitude.
 function monitorDdLonConvert() {
     "use strict";
 
