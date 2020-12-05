@@ -25,7 +25,7 @@ function showDmsForm() {
             monitorDmsLonConvert();
 
             //Get DMS to DD tab. Add class to highlight it.
-            const dmsTab = document.getElementById("dms-to-dd");
+            const dmsTab = document.getElementById("dms-tab");
             dmsTab.classList.add("selected");
         } else if (form.className === "dd-form") {
 
@@ -33,7 +33,7 @@ function showDmsForm() {
             form.style.display = "none";
 
             //Get DD to DMS tab. Remove class that highlights it.
-            const ddTab = document.getElementById("dd-to-dms");
+            const ddTab = document.getElementById("dd-tab");
             ddTab.classList.remove("selected");
         }
     });
