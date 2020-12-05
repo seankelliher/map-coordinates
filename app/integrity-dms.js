@@ -1,4 +1,9 @@
-//Integrity Check for DMS to DD - Latitude.
+//Below functions are same, but for different forms.
+//Receive input values from "inputs" module.
+//Run checks on values.
+//Return either error message or "false" to "inputs" module.
+
+//DMS to DD - Latitude.
 function integrityCheckDmsLat(deg, min, sec) {
     "use strict";
 
@@ -49,7 +54,7 @@ function integrityCheckDmsLat(deg, min, sec) {
     }
 }
 
-//Integrity Check for DMS to DD - Longitude.
+//DMS to DD - Longitude.
 function integrityCheckDmsLon(deg, min, sec) {
     "use strict";
 
