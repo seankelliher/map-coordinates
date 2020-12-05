@@ -11,7 +11,7 @@ function showDdForm() {
 
     //Show the DD to DMS form. Hide the other.
     formsArray.forEach(function (form) {
-        if (form.className === "dd-to-dms") {
+        if (form.className === "dd-form") {
 
             //Show the DD to DMS form.
             form.style.display = "block";
@@ -27,7 +27,7 @@ function showDdForm() {
             //Get DD to DMS tab. Add class to highlight it.
             const ddTab = document.getElementById("dd-to-dms");
             ddTab.classList.add("selected");
-        } else if (form.className === "dms-to-dd") {
+        } else if (form.className === "dms-form") {
 
             //Hide the DMS to DD form.
             form.style.display = "none";
