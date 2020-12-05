@@ -1,3 +1,8 @@
+//When DOM loads, "index" module signals "tabs" module.
+//Tabs module monitors tabs on page for clicks.
+//When user clicks, "tabs" module signals, "forms" module.
+//Forms module shows/hides forms, highlights/un-highlights tabs on page.
+
 import {showDmsForm} from "./form-dms.js";
 import {showDdForm} from "./form-dd.js";
 
