@@ -1,5 +1,5 @@
 import {monitorDmsLatConvert, monitorDmsLonConvert} from "./inputs-dms.js";
-import{monitorDmsLatClear, monitorDmsLonClear} from "./clear.js";
+import {monitorDmsLatClear, monitorDmsLonClear} from "./clear.js";
 
 //Show the DMS to DD form elements.
 function showDmsForm() {
@@ -9,7 +9,7 @@ function showDmsForm() {
     const forms = document.querySelectorAll("form");
     const formsArray = Array.from(forms); //Works without converting too.
 
-    //Show the DMS to DD form. Hide the other.
+    //Shows the DMS to DD form. Hides the other.
     formsArray.forEach(function (form) {
         if (form.className === "dms-form") {
 
