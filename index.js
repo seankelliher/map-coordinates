@@ -1,7 +1,9 @@
 import {showDmsForm} from "./app/form-dms.js";
 import {monitorTabs} from "./app/tabs.js";
 
-//Monitor page, after it loads invoke function.
+//Monitor DOM, after it loads, invoke functions.
+//Functions are in "form" and "tabs" modules.
+
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
