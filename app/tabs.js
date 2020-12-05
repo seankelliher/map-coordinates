@@ -11,9 +11,9 @@ function monitorTabs() {
     //Get the clicked tab's id.
     //Invoke functions to show/hide those form elements.
     nav.addEventListener("click", function (event) {
-        if (event.target.id === "dms-to-dd") {
+        if (event.target.id === "dms-tab") {
             showDmsForm();
-        } else if (event.target.id === "dd-to-dms") {
+        } else if (event.target.id === "dd-tab") {
             showDdForm();
         }
     });
