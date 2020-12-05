@@ -1,4 +1,8 @@
-//Math to convert DMS to DD - Latitude and Longitude.
+//If "integrity" module returns false (meaning values are okay),
+//"inputs" module sends inputs here, the "math" module.
+//Math module converts input values, returns result.
+
+//DMS to DD - Latitude and Longitude.
 function doTheMathDms(deg, min, sec, lines) {
     "use strict";
 
