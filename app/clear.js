@@ -27,7 +27,7 @@ function clearInputs(form, sum) {
 //Monitor the "clear" buttons in each form.
 //If clicked, send paramenters to the above function to clear inputs, text.
 
-//Monitor DMS to DD form - Latitude.
+//DMS to DD form - Latitude.
 function monitorDmsLatClear() {
     "use strict";
 
@@ -40,7 +40,7 @@ function monitorDmsLatClear() {
     });
 }
 
-//Monitor DMS to DD form - Longitude.
+//DMS to DD form - Longitude.
 function monitorDmsLonClear() {
     "use strict";
 
@@ -53,7 +53,7 @@ function monitorDmsLonClear() {
     });
 }
 
-//Monitor DD to DMS form - Latitude.
+//DD to DMS form - Latitude.
 function monitorDdLatClear() {
     "use strict";
 
@@ -66,7 +66,7 @@ function monitorDdLatClear() {
     });
 }
 
-//Monitor DD to DMS form - Longitude.
+//DD to DMS form - Longitude.
 function monitorDdLonClear() {
     "use strict";
 
