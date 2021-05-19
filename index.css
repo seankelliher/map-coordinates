@@ -21,36 +21,19 @@ header {
     flex: initial; /*flex: 0 1 auto*/
 }
 
-header::before {
-    content:  "";
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    width: 1200px;
-    left: 100%;
-    background: #FAFAFA; /*grey 50*/
-    border-bottom: 1px solid #EEE; /*grey 200*/
-}
-
-header::after {
-    content:  "";
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    width: 1200px;
-    right: 100%;
-    background: #FAFAFA; /*grey 50*/
-    border-bottom: 1px solid #EEE; /*grey 200*/
-}
-
 nav {
     width: 90%;
-    margin: 1em 5% 0 5%;
-    padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    margin: 0 5%;
+    padding: 1em 0;
+    border-top: 1px solid #EEE; /*grey 200*/
     border-bottom: 1px solid #EEE; /*grey 200*/
-}
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: flex-start; /*cross axis*/
 
+}
 button {
     margin: 0 2.5% 0 0;
     border-top: 1px solid #EEE; /*grey 200*/
