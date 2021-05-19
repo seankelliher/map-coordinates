@@ -34,35 +34,22 @@ nav {
     align-items: flex-start; /*cross axis*/
 
 }
+
 button {
-    margin: 0 2.5% 0 0;
-    border-top: 1px solid #EEE; /*grey 200*/
-    border-right: 1px solid #EEE; /*grey 200*/
-    border-left: 1px solid #EEE; /*grey 200*/
-    border-bottom: none;
+    width: 45%;
+    margin: 0;
     background: #FAFAFA; /*grey 50*/
+    border: 1px solid #EEE; /*grey 200*/
     cursor: pointer;
+    flex: initial; /*flex: 0 1 auto*/
 }
 
 button:hover {
     text-decoration: none;
 }
 
-@media all and (min-width: 300px) {
-    button {
-        width: 40%;
-    }
-}
-
-@media all and (min-width: 600px) {
-    button {
-        width: 30%;
-    }
-}
-
 .selected {
-    color: #FFF;
-    background: #1976D2; /*blue 700*/
+    background: #42A5F5; /*blue 400*/
 }
 
 form {
