@@ -16,12 +16,9 @@ body {
 
 header {
     width: 90%;
-    margin: 0 0 1em 0;
+    margin: 1.5em 0 0 0;
     padding: 1em 5%;
     flex: initial; /*flex: 0 1 auto*/
-    background: #FAFAFA; /*grey 50*/
-    border-bottom: 1px solid #EEE; /*grey 200*/
-    position:  relative;
 }
 
 header::before {
