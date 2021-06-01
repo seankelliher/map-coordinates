@@ -212,28 +212,42 @@ p, label, input, span, li {
 
 @media all and (min-width: 300px) {
     p, label, input, span, li {
-        font-size: .9375em; /*15 pixels*/
+        font-size: .875em;
     }
 
     h1 {
-        font-size: 1.4375em; /*23 pixels*/
+        font-size: 1.2em;
     }
 
     h2, button {
-        font-size: 1.0625em; /*17 pixels*/
+        font-size: 1em;
+    }
+}
+
+@media all and (min-width: 400px) {
+    p, label, input, span, li {
+        font-size: .9375em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2, button {
+        font-size: 1.2em;
     }
 }
 
 @media all and (min-width: 600px) {
     p, label, input, span, li {
-        font-size: 1em; /*16 pixels*/
+        font-size: 1em;
     }
 
     h1 {
-        font-size: 1.5em; /*24 pixels*/
+        font-size: 1.6em;
     }
 
     h2, button {
-        font-size: 1.125em; /*18 pixels*/
+        font-size: 1.4em;
     }
 }
